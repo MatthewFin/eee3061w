@@ -33,7 +33,7 @@
 #define CALIBRATE_LINE	1
 #define CALIBRATE_PROX	2
 
-#define LCD_MAIN					-1
+#define LCD_MAIN					-1 // checkehck
 #define LCD_CALIBRATION_MODE_SELECT	0
 #define LCD_CALIBRATION_LIGHT 		1
 #define LCD_CALIBRATION_LINE		2
