@@ -1,0 +1,1560 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--This file was written by TinyCAD Version 2.80.08 Build #631 Production Release
+If you wish to view this file go to http://tinycad.sourceforge.net to
+download the executable.-->
+<TinyCADSheets>
+	<TinyCAD>
+		<NAME>Sheet 1</NAME>
+		<DETAILS>
+			<Size width='1485' height='1050'/>
+			<GUIDES horiz='7' vert='5'/>
+			<TITLE></TITLE>
+			<AUTHOR></AUTHOR>
+			<REVISION>1.0</REVISION>
+			<DOCNUMBER></DOCNUMBER>
+			<ORGANISATION></ORGANISATION>
+			<SHEETS>1 of 1</SHEETS>
+			<SHOWS>1</SHOWS>
+			<DATE></DATE>
+			<GRID spacing='100.00000' snap='1'/>
+		</DETAILS>
+		<FONT id='1'>
+			<HEIGHT>-10</HEIGHT>
+			<WIDTH>0</WIDTH>
+			<WEIGHT>400</WEIGHT>
+			<ITALIC>0</ITALIC>
+			<UNDERLINE>0</UNDERLINE>
+			<STRIKEOUT>0</STRIKEOUT>
+			<CHARSET>0</CHARSET>
+			<FACENAME>Arial</FACENAME>
+		</FONT>
+		<FONT id='3'>
+			<HEIGHT>-24</HEIGHT>
+			<WIDTH>11</WIDTH>
+			<WEIGHT>400</WEIGHT>
+			<ITALIC>0</ITALIC>
+			<UNDERLINE>0</UNDERLINE>
+			<STRIKEOUT>0</STRIKEOUT>
+			<CHARSET>0</CHARSET>
+			<FACENAME>Arial</FACENAME>
+		</FONT>
+		<STYLE id='3'>
+			<STYLE>0</STYLE>
+			<COLOR>000000</COLOR>
+			<THICKNESS>1</THICKNESS>
+		</STYLE>
+		<STYLE id='4'>
+			<STYLE>0</STYLE>
+			<COLOR>000000</COLOR>
+			<THICKNESS>5</THICKNESS>
+		</STYLE>
+		<STYLE id='5'>
+			<STYLE>0</STYLE>
+			<COLOR>000000</COLOR>
+			<THICKNESS>1</THICKNESS>
+		</STYLE>
+		<FILL id='0'>
+			<INDEX>-1</INDEX>
+			<COLOR>000000</COLOR>
+		</FILL>
+		<FILL id='1'>
+			<INDEX>0</INDEX>
+			<COLOR>000000</COLOR>
+		</FILL>
+		<FILL id='2'>
+			<INDEX>0</INDEX>
+			<COLOR>FFFFFF</COLOR>
+		</FILL>
+		<SYMBOLDEF id='1'>
+			<NAME type='0'>STM32F051C6</NAME>
+			<REF type='0'>U?</REF>
+			<DESCRIPTION>STM32F0 Peripheral Interface Adapter</DESCRIPTION>
+			<PPP>1</PPP>
+			<FIELD>
+				<NAME>$$SPICE_PROLOG_PRIORITY</NAME>
+				<DEFAULT>5</DEFAULT>
+				<FT>000002</FT>
+				<VALUE></VALUE>
+				<POS>0.00000,0.00000</POS>
+			</FIELD>
+			<FIELD>
+				<NAME>$$SPICE_EPILOG_PRIORITY</NAME>
+				<DEFAULT>5</DEFAULT>
+				<FT>000002</FT>
+				<VALUE></VALUE>
+				<POS>0.00000,0.00000</POS>
+			</FIELD>
+			<FIELD>
+				<NAME>Package</NAME>
+				<DEFAULT>matt</DEFAULT>
+				<FT>000001</FT>
+				<VALUE></VALUE>
+				<POS>0.00000,0.00000</POS>
+			</FIELD>
+			<REF_POINT power='0' part='0' pos='144.00000,154.00000'/>
+			<TinyCAD>
+				<RECTANGLE a='85.00000,49.00000' b='133.00000,153.00000' style='4' fill='0'/>
+				<PIN pos='74.00000,60.00000' which='0' elec='5' direction='3' part='0' number='2' show='3' length='60' number_pos='18' centre_name='0'>PC13</PIN>
+				<PIN pos='74.00000,64.00000' which='0' elec='5' direction='3' part='0' number='3' show='3' length='60' number_pos='18' centre_name='0'>PC14/OSC32_IN</PIN>
+				<PIN pos='74.00000,68.00000' which='0' elec='5' direction='3' part='0' number='4' show='3' length='60' number_pos='18' centre_name='0'>PC15/OSC32_OUT</PIN>
+				<PIN pos='74.00000,72.00000' which='0' elec='5' direction='3' part='0' number='5' show='3' length='60' number_pos='18' centre_name='0'>PFO/OSC_IN</PIN>
+				<PIN pos='74.00000,76.00000' which='0' elec='5' direction='3' part='0' number='6' show='3' length='60' number_pos='18' centre_name='0'>PF1/OSC_OUT</PIN>
+				<PIN pos='74.00000,80.00000' which='0' elec='5' direction='3' part='0' number='7' show='3' length='60' number_pos='18' centre_name='0'>NRST</PIN>
+				<PIN pos='74.00000,84.00000' which='0' elec='5' direction='3' part='0' number='8' show='3' length='60' number_pos='18' centre_name='0'>VSSA(GND)</PIN>
+				<PIN pos='74.00000,88.00000' which='0' elec='5' direction='3' part='0' number='9' show='3' length='60' number_pos='18' centre_name='0'>VDDA(3.3v)</PIN>
+				<PIN pos='74.00000,92.00000' which='0' elec='5' direction='3' part='0' number='10' show='3' length='60' number_pos='18' centre_name='0'>PA0</PIN>
+				<PIN pos='74.00000,96.00000' which='0' elec='5' direction='3' part='0' number='11' show='3' length='60' number_pos='18' centre_name='0'>PA1</PIN>
+				<PIN pos='74.00000,100.00000' which='0' elec='5' direction='3' part='0' number='12' show='3' length='60' number_pos='18' centre_name='0'>PA2</PIN>
+				<PIN pos='74.00000,104.00000' which='0' elec='5' direction='3' part='0' number='13' show='3' length='60' number_pos='18' centre_name='0'>PA3</PIN>
+				<PIN pos='74.00000,108.00000' which='0' elec='5' direction='3' part='0' number='14' show='3' length='60' number_pos='18' centre_name='0'>PA4</PIN>
+				<PIN pos='74.00000,112.00000' which='0' elec='5' direction='3' part='0' number='15' show='3' length='60' number_pos='18' centre_name='0'>PA5</PIN>
+				<PIN pos='74.00000,116.00000' which='0' elec='5' direction='3' part='0' number='16' show='3' length='60' number_pos='18' centre_name='0'>PA6</PIN>
+				<PIN pos='74.00000,120.00000' which='0' elec='5' direction='3' part='0' number='17' show='3' length='60' number_pos='18' centre_name='0'>PA7</PIN>
+				<PIN pos='74.00000,124.00000' which='0' elec='0' direction='3' part='0' number='18' show='3' length='60' number_pos='18' centre_name='0'>PB0</PIN>
+				<PIN pos='74.00000,128.00000' which='0' elec='5' direction='3' part='0' number='19' show='3' length='60' number_pos='18' centre_name='0'>PB1</PIN>
+				<PIN pos='144.00000,148.00000' which='0' elec='0' direction='2' part='0' number='25' show='3' length='60' number_pos='18' centre_name='0'>PB12</PIN>
+				<PIN pos='144.00000,144.00000' which='0' elec='0' direction='2' part='0' number='26' show='3' length='60' number_pos='18' centre_name='0'>PB13</PIN>
+				<PIN pos='144.00000,140.00000' which='0' elec='5' direction='2' part='0' number='27' show='3' length='60' number_pos='18' centre_name='0'>PB14</PIN>
+				<PIN pos='144.00000,136.00000' which='0' elec='5' direction='2' part='0' number='28' show='3' length='60' number_pos='18' centre_name='0'>PB15</PIN>
+				<PIN pos='144.00000,132.00000' which='0' elec='5' direction='2' part='0' number='29' show='3' length='60' number_pos='18' centre_name='0'>PA8</PIN>
+				<PIN pos='144.00000,128.00000' which='0' elec='5' direction='2' part='0' number='30' show='3' length='60' number_pos='18' centre_name='0'>PA9</PIN>
+				<PIN pos='144.00000,124.00000' which='0' elec='5' direction='2' part='0' number='31' show='3' length='60' number_pos='18' centre_name='0'>PA10</PIN>
+				<PIN pos='144.00000,120.00000' which='0' elec='5' direction='2' part='0' number='32' show='3' length='60' number_pos='18' centre_name='0'>PA11</PIN>
+				<PIN pos='144.00000,116.00000' which='0' elec='5' direction='2' part='0' number='33' show='3' length='60' number_pos='18' centre_name='0'>PA12</PIN>
+				<PIN pos='144.00000,112.00000' which='0' elec='0' direction='2' part='0' number='34' show='3' length='60' number_pos='18' centre_name='0'>PA13</PIN>
+				<PIN pos='144.00000,108.00000' which='0' elec='0' direction='2' part='0' number='35' show='3' length='60' number_pos='18' centre_name='0'>PF6</PIN>
+				<PIN pos='144.00000,104.00000' which='0' elec='0' direction='2' part='0' number='36' show='3' length='60' number_pos='18' centre_name='0'>PF7</PIN>
+				<PIN pos='144.00000,100.00000' which='0' elec='0' direction='2' part='0' number='37' show='3' length='60' number_pos='18' centre_name='0'>PA14</PIN>
+				<PIN pos='144.00000,96.00000' which='0' elec='0' direction='2' part='0' number='38' show='3' length='60' number_pos='18' centre_name='0'>PA15</PIN>
+				<PIN pos='144.00000,92.00000' which='0' elec='5' direction='2' part='0' number='39' show='3' length='60' number_pos='18' centre_name='0'>PB3</PIN>
+				<PIN pos='144.00000,88.00000' which='0' elec='0' direction='2' part='0' number='40' show='3' length='60' number_pos='18' centre_name='0'>PB4</PIN>
+				<LABEL pos='101.00000,59.00000' direction='3' font='3' color='208000' style='0'>STM32</LABEL>
+				<PIN pos='74.00000,132.00000' which='0' elec='5' direction='3' part='0' number='20' show='3' length='60' number_pos='18' centre_name='0'>PB2</PIN>
+				<PIN pos='74.00000,136.00000' which='0' elec='5' direction='3' part='0' number='21' show='3' length='60' number_pos='18' centre_name='0'>PB10</PIN>
+				<PIN pos='74.00000,140.00000' which='0' elec='5' direction='3' part='0' number='22' show='3' length='60' number_pos='18' centre_name='0'>PB11</PIN>
+				<PIN pos='74.00000,144.00000' which='0' elec='5' direction='3' part='0' number='23' show='3' length='60' number_pos='18' centre_name='0'>VSS(GND)</PIN>
+				<PIN pos='74.00000,148.00000' which='0' elec='5' direction='3' part='0' number='24' show='3' length='60' number_pos='18' centre_name='0'>VDD(3.3v)</PIN>
+				<PIN pos='144.00000,84.00000' which='0' elec='5' direction='2' part='0' number='41' show='3' length='60' number_pos='18' centre_name='0'>PB5</PIN>
+				<PIN pos='144.00000,80.00000' which='0' elec='5' direction='2' part='0' number='42' show='3' length='60' number_pos='18' centre_name='0'>PB6</PIN>
+				<PIN pos='144.00000,76.00000' which='0' elec='0' direction='2' part='0' number='43' show='3' length='60' number_pos='18' centre_name='0'>PB7</PIN>
+				<PIN pos='144.00000,72.00000' which='0' elec='0' direction='2' part='0' number='44' show='3' length='60' number_pos='18' centre_name='0'>BOOT0</PIN>
+				<PIN pos='144.00000,68.00000' which='0' elec='0' direction='2' part='0' number='45' show='3' length='60' number_pos='18' centre_name='0'>PB8</PIN>
+				<PIN pos='144.00000,64.00000' which='0' elec='0' direction='2' part='0' number='46' show='3' length='60' number_pos='18' centre_name='0'>PB9</PIN>
+				<PIN pos='144.00000,60.00000' which='0' elec='0' direction='2' part='0' number='47' show='3' length='60' number_pos='18' centre_name='0'>VSS(GND)</PIN>
+				<PIN pos='144.00000,56.00000' which='0' elec='5' direction='2' part='0' number='48' show='3' length='60' number_pos='18' centre_name='0'>VDD(3.3v)</PIN>
+				<PIN pos='74.00000,56.00000' which='0' elec='5' direction='3' part='0' number='1' show='3' length='60' number_pos='18' centre_name='0'>VBAT(3.3v)</PIN>
+			</TinyCAD>
+		</SYMBOLDEF>
+		<SYMBOLDEF id='2'>
+			<NAME type='0'>Conn_1</NAME>
+			<REF type='0'>J?</REF>
+			<DESCRIPTION>Connector 1 Pin</DESCRIPTION>
+			<PPP>1</PPP>
+			<FIELD>
+				<NAME>$$SPICE_PROLOG_PRIORITY</NAME>
+				<DEFAULT>5</DEFAULT>
+				<FT>000002</FT>
+				<VALUE></VALUE>
+				<POS>0.00000,0.00000</POS>
+			</FIELD>
+			<FIELD>
+				<NAME>$$SPICE_EPILOG_PRIORITY</NAME>
+				<DEFAULT>5</DEFAULT>
+				<FT>000002</FT>
+				<VALUE></VALUE>
+				<POS>0.00000,0.00000</POS>
+			</FIELD>
+			<FIELD>
+				<NAME>Package</NAME>
+				<DEFAULT>SIP1</DEFAULT>
+				<FT>000001</FT>
+				<VALUE></VALUE>
+				<POS>0.00000,0.00000</POS>
+			</FIELD>
+			<REF_POINT power='0' part='0' pos='28.00000,24.00000'/>
+			<REF_POINT power='1' part='0' pos='28.00000,24.00000'/>
+			<TinyCAD>
+				<RECTANGLE a='24.00000,20.00000' b='28.00000,24.00000' style='5' fill='0'/>
+				<PIN pos='20.00000,22.00000' which='0' elec='0' direction='3' part='0' number='1' show='3' length='30' number_pos='0' centre_name='0'></PIN>
+			</TinyCAD>
+		</SYMBOLDEF>
+		<SYMBOLDEF id='3'>
+			<NAME type='0'>SWITCH1</NAME>
+			<REF type='0'>S?</REF>
+			<DESCRIPTION>Single Pole Push Switch</DESCRIPTION>
+			<PPP>1</PPP>
+			<REF_POINT power='0' part='0' pos='85.00000,53.00000'/>
+			<TinyCAD>
+				<PIN pos='83.00000,53.00000' which='0' elec='4' direction='0' part='0' number='2' show='0' length='30' number_pos='0' centre_name='0'></PIN>
+				<PIN pos='83.00000,33.00000' which='0' elec='4' direction='1' part='0' number='1' show='0' length='30' number_pos='0' centre_name='0'></PIN>
+				<POLYGON pos='81.00000,39.00000' style='5' fill='0'>
+					<POINT pos='0.00000,8.00000' arc='0'/>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='80.00000,43.00000' style='5' fill='0'>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='80.00000,42.00000' style='5' fill='0'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<ELLIPSE a='82.00000,45.00000' b='84.00000,47.00000' style='5' fill='0'/>
+				<ELLIPSE a='82.00000,41.00000' b='84.00000,39.00000' style='5' fill='0'/>
+			</TinyCAD>
+		</SYMBOLDEF>
+		<SYMBOLDEF id='4'>
+			<NAME type='0'>Conn_1</NAME>
+			<REF type='0'>J?</REF>
+			<DESCRIPTION>Connector 1 Pin</DESCRIPTION>
+			<PPP>1</PPP>
+			<FIELD>
+				<NAME>$$SPICE_PROLOG_PRIORITY</NAME>
+				<DEFAULT>5</DEFAULT>
+				<FT>000002</FT>
+				<VALUE></VALUE>
+				<POS>0.00000,0.00000</POS>
+			</FIELD>
+			<FIELD>
+				<NAME>$$SPICE_EPILOG_PRIORITY</NAME>
+				<DEFAULT>5</DEFAULT>
+				<FT>000002</FT>
+				<VALUE></VALUE>
+				<POS>0.00000,0.00000</POS>
+			</FIELD>
+			<FIELD>
+				<NAME>Package</NAME>
+				<DEFAULT>SIP1</DEFAULT>
+				<FT>000001</FT>
+				<VALUE></VALUE>
+				<POS>0.00000,0.00000</POS>
+			</FIELD>
+			<REF_POINT power='0' part='0' pos='28.00000,24.00000'/>
+			<TinyCAD>
+				<RECTANGLE a='24.00000,20.00000' b='28.00000,24.00000' style='5' fill='0'/>
+				<PIN pos='20.00000,22.00000' which='0' elec='0' direction='3' part='0' number='1' show='3' length='30' number_pos='0' centre_name='0'></PIN>
+			</TinyCAD>
+		</SYMBOLDEF>
+		<SYMBOLDEF id='6'>
+			<NAME type='0'>Conn_1</NAME>
+			<REF type='0'>J?</REF>
+			<DESCRIPTION>Connector 1 Pin</DESCRIPTION>
+			<PPP>1</PPP>
+			<FIELD>
+				<NAME>$$SPICE_PROLOG_PRIORITY</NAME>
+				<DEFAULT>5</DEFAULT>
+				<FT>000002</FT>
+				<VALUE></VALUE>
+				<POS>0.00000,0.00000</POS>
+			</FIELD>
+			<FIELD>
+				<NAME>$$SPICE_EPILOG_PRIORITY</NAME>
+				<DEFAULT>5</DEFAULT>
+				<FT>000002</FT>
+				<VALUE></VALUE>
+				<POS>0.00000,0.00000</POS>
+			</FIELD>
+			<FIELD>
+				<NAME>Package</NAME>
+				<DEFAULT>SIP1</DEFAULT>
+				<FT>000001</FT>
+				<VALUE></VALUE>
+				<POS>0.00000,0.00000</POS>
+			</FIELD>
+			<REF_POINT power='0' part='0' pos='28.00000,24.00000'/>
+			<TinyCAD>
+				<RECTANGLE a='24.00000,20.00000' b='28.00000,24.00000' style='5' fill='0'/>
+				<PIN pos='20.00000,22.00000' which='0' elec='0' direction='3' part='0' number='1' show='3' length='30' number_pos='0' centre_name='0'></PIN>
+			</TinyCAD>
+		</SYMBOLDEF>
+		<SYMBOLDEF id='7'>
+			<NAME type='0'>BATTERY_2</NAME>
+			<REF type='0'>Z?</REF>
+			<DESCRIPTION>I can haz description?</DESCRIPTION>
+			<PPP>1</PPP>
+			<FIELD>
+				<NAME>$$SPICE_PROLOG_PRIORITY</NAME>
+				<DEFAULT>5</DEFAULT>
+				<FT>000002</FT>
+				<VALUE></VALUE>
+				<POS>0.00000,0.00000</POS>
+			</FIELD>
+			<FIELD>
+				<NAME>$$SPICE_EPILOG_PRIORITY</NAME>
+				<DEFAULT>5</DEFAULT>
+				<FT>000002</FT>
+				<VALUE></VALUE>
+				<POS>0.00000,0.00000</POS>
+			</FIELD>
+			<FIELD>
+				<NAME>Package</NAME>
+				<DEFAULT></DEFAULT>
+				<FT>000001</FT>
+				<VALUE></VALUE>
+				<POS>0.00000,0.00000</POS>
+			</FIELD>
+			<FIELD>
+				<NAME>None</NAME>
+				<DEFAULT>None</DEFAULT>
+				<FT>000001</FT>
+				<VALUE></VALUE>
+				<POS>0.00000,0.00000</POS>
+			</FIELD>
+			<REF_POINT power='0' part='0' pos='124.00000,66.00000'/>
+			<TinyCAD>
+				<POLYGON pos='120.00000,63.00000' style='5' fill='0'>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,3.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='119.00000,63.00000' style='5' fill='0'>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='118.00000,62.00000' style='5' fill='0'>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+					<POINT pos='4.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='121.60000,58.00000' style='5' fill='0'>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,1.20000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='121.00000,58.60000' style='5' fill='0'>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+					<POINT pos='1.20000,0.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='119.00000,61.00000' style='5' fill='0'>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='118.00000,60.00000' style='5' fill='0'>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+					<POINT pos='4.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<PIN pos='120.00000,66.00000' which='0' elec='4' direction='0' part='0' number='2' show='0' length='15' number_pos='0' centre_name='0'></PIN>
+				<PIN pos='120.00000,57.00000' which='0' elec='4' direction='1' part='0' number='1' show='0' length='15' number_pos='0' centre_name='0'></PIN>
+			</TinyCAD>
+		</SYMBOLDEF>
+		<SYMBOLDEF id='8'>
+			<NAME type='0'>POT1</NAME>
+			<REF type='0'>R?</REF>
+			<DESCRIPTION>Variable Resistor (USA Style)</DESCRIPTION>
+			<PPP>1</PPP>
+			<REF_POINT power='0' part='0' pos='80.00000,54.00000'/>
+			<TinyCAD>
+				<PIN pos='70.00000,34.00000' which='0' elec='4' direction='1' part='0' number='2' show='0' length='30' number_pos='0' centre_name='0'></PIN>
+				<PIN pos='70.00000,54.00000' which='0' elec='4' direction='0' part='0' number='1' show='0' length='30' number_pos='0' centre_name='0'></PIN>
+				<PIN pos='80.00000,44.00000' which='0' elec='4' direction='2' part='0' number='3' show='0' length='30' number_pos='0' centre_name='0'>adj</PIN>
+				<POLYGON pos='68.00000,40.60000' style='5' fill='0'>
+					<POINT pos='0.00000,1.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='68.00000,41.60000' style='5' fill='0'>
+					<POINT pos='4.00000,1.00000' arc='0'/>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='68.00000,42.60000' style='5' fill='0'>
+					<POINT pos='0.00000,1.00000' arc='0'/>
+					<POINT pos='4.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='68.00000,43.60000' style='5' fill='0'>
+					<POINT pos='4.00000,1.00000' arc='0'/>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='68.00000,44.60000' style='5' fill='0'>
+					<POINT pos='0.00000,1.00000' arc='0'/>
+					<POINT pos='4.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='68.00000,45.60000' style='5' fill='0'>
+					<POINT pos='4.00000,1.00000' arc='0'/>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='70.00000,46.60000' style='5' fill='0'>
+					<POINT pos='0.00000,1.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='70.00000,47.60000' style='5' fill='0'>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,0.40000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='70.00000,40.00000' style='5' fill='0'>
+					<POINT pos='0.00000,0.60000' arc='0'/>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='72.00000,44.00000' style='5' fill='0'>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='72.00000,43.00000' style='5' fill='0'>
+					<POINT pos='0.00000,1.00000' arc='0'/>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='72.00000,44.00000' style='5' fill='0'>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+					<POINT pos='1.00000,1.00000' arc='0'/>
+				</POLYGON>
+			</TinyCAD>
+		</SYMBOLDEF>
+		<SYMBOLDEF id='9'>
+			<NAME type='0'>BREAKAWAY_HDR</NAME>
+			<REF type='0'>U?</REF>
+			<DESCRIPTION>New symbol</DESCRIPTION>
+			<PPP>1</PPP>
+			<FIELD>
+				<NAME>$$SPICE_PROLOG_PRIORITY</NAME>
+				<DEFAULT>5</DEFAULT>
+				<FT>000002</FT>
+				<VALUE></VALUE>
+				<POS>0.00000,0.00000</POS>
+			</FIELD>
+			<FIELD>
+				<NAME>$$SPICE_EPILOG_PRIORITY</NAME>
+				<DEFAULT>5</DEFAULT>
+				<FT>000002</FT>
+				<VALUE></VALUE>
+				<POS>0.00000,0.00000</POS>
+			</FIELD>
+			<FIELD>
+				<NAME>Package</NAME>
+				<DEFAULT>package name for PCB layout</DEFAULT>
+				<FT>000001</FT>
+				<VALUE></VALUE>
+				<POS>0.00000,0.00000</POS>
+			</FIELD>
+			<REF_POINT power='0' part='0' pos='70.00000,24.00000'/>
+			<TinyCAD>
+				<POLYGON pos='64.00000,20.00000' style='3' fill='1'>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,1.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='1.00000,3.00000' arc='0'/>
+					<POINT pos='2.00000,3.00000' arc='0'/>
+					<POINT pos='3.00000,2.00000' arc='0'/>
+					<POINT pos='3.00000,1.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<ELLIPSE a='65.00000,21.00000' b='66.00000,22.00000' style='3' fill='2'/>
+				<POLYGON pos='67.00000,20.00000' style='3' fill='1'>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,1.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='1.00000,3.00000' arc='0'/>
+					<POINT pos='2.00000,3.00000' arc='0'/>
+					<POINT pos='3.00000,2.00000' arc='0'/>
+					<POINT pos='3.00000,1.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<ELLIPSE a='68.00000,21.00000' b='69.00000,22.00000' style='3' fill='2'/>
+				<POLYGON pos='40.00000,20.00000' style='3' fill='1'>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,1.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='1.00000,3.00000' arc='0'/>
+					<POINT pos='2.00000,3.00000' arc='0'/>
+					<POINT pos='3.00000,2.00000' arc='0'/>
+					<POINT pos='3.00000,1.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<ELLIPSE a='41.00000,21.00000' b='42.00000,22.00000' style='3' fill='2'/>
+				<POLYGON pos='43.00000,20.00000' style='3' fill='1'>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,1.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='1.00000,3.00000' arc='0'/>
+					<POINT pos='2.00000,3.00000' arc='0'/>
+					<POINT pos='3.00000,2.00000' arc='0'/>
+					<POINT pos='3.00000,1.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<ELLIPSE a='44.00000,21.00000' b='45.00000,22.00000' style='3' fill='2'/>
+				<POLYGON pos='46.00000,20.00000' style='3' fill='1'>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,1.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='1.00000,3.00000' arc='0'/>
+					<POINT pos='2.00000,3.00000' arc='0'/>
+					<POINT pos='3.00000,2.00000' arc='0'/>
+					<POINT pos='3.00000,1.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<ELLIPSE a='47.00000,21.00000' b='48.00000,22.00000' style='3' fill='2'/>
+				<POLYGON pos='49.00000,20.00000' style='3' fill='1'>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,1.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='1.00000,3.00000' arc='0'/>
+					<POINT pos='2.00000,3.00000' arc='0'/>
+					<POINT pos='3.00000,2.00000' arc='0'/>
+					<POINT pos='3.00000,1.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<ELLIPSE a='50.00000,21.00000' b='51.00000,22.00000' style='3' fill='2'/>
+				<POLYGON pos='52.00000,20.00000' style='3' fill='1'>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,1.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='1.00000,3.00000' arc='0'/>
+					<POINT pos='2.00000,3.00000' arc='0'/>
+					<POINT pos='3.00000,2.00000' arc='0'/>
+					<POINT pos='3.00000,1.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<ELLIPSE a='53.00000,21.00000' b='54.00000,22.00000' style='3' fill='2'/>
+				<POLYGON pos='55.00000,20.00000' style='3' fill='1'>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,1.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='1.00000,3.00000' arc='0'/>
+					<POINT pos='2.00000,3.00000' arc='0'/>
+					<POINT pos='3.00000,2.00000' arc='0'/>
+					<POINT pos='3.00000,1.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<ELLIPSE a='56.00000,21.00000' b='57.00000,22.00000' style='3' fill='2'/>
+				<POLYGON pos='58.00000,20.00000' style='3' fill='1'>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,1.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='1.00000,3.00000' arc='0'/>
+					<POINT pos='2.00000,3.00000' arc='0'/>
+					<POINT pos='3.00000,2.00000' arc='0'/>
+					<POINT pos='3.00000,1.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<ELLIPSE a='59.00000,21.00000' b='60.00000,22.00000' style='3' fill='2'/>
+				<POLYGON pos='61.00000,20.00000' style='3' fill='1'>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,1.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='1.00000,3.00000' arc='0'/>
+					<POINT pos='2.00000,3.00000' arc='0'/>
+					<POINT pos='3.00000,2.00000' arc='0'/>
+					<POINT pos='3.00000,1.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<ELLIPSE a='62.00000,21.00000' b='63.00000,22.00000' style='3' fill='2'/>
+				<POLYGON pos='16.00000,20.00000' style='3' fill='1'>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,1.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='1.00000,3.00000' arc='0'/>
+					<POINT pos='2.00000,3.00000' arc='0'/>
+					<POINT pos='3.00000,2.00000' arc='0'/>
+					<POINT pos='3.00000,1.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<ELLIPSE a='17.00000,21.00000' b='18.00000,22.00000' style='3' fill='2'/>
+				<POLYGON pos='19.00000,20.00000' style='3' fill='1'>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,1.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='1.00000,3.00000' arc='0'/>
+					<POINT pos='2.00000,3.00000' arc='0'/>
+					<POINT pos='3.00000,2.00000' arc='0'/>
+					<POINT pos='3.00000,1.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<ELLIPSE a='20.00000,21.00000' b='21.00000,22.00000' style='3' fill='2'/>
+				<POLYGON pos='22.00000,20.00000' style='3' fill='1'>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,1.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='1.00000,3.00000' arc='0'/>
+					<POINT pos='2.00000,3.00000' arc='0'/>
+					<POINT pos='3.00000,2.00000' arc='0'/>
+					<POINT pos='3.00000,1.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<ELLIPSE a='23.00000,21.00000' b='24.00000,22.00000' style='3' fill='2'/>
+				<POLYGON pos='25.00000,20.00000' style='3' fill='1'>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,1.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='1.00000,3.00000' arc='0'/>
+					<POINT pos='2.00000,3.00000' arc='0'/>
+					<POINT pos='3.00000,2.00000' arc='0'/>
+					<POINT pos='3.00000,1.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<ELLIPSE a='26.00000,21.00000' b='27.00000,22.00000' style='3' fill='2'/>
+				<POLYGON pos='28.00000,20.00000' style='3' fill='1'>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,1.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='1.00000,3.00000' arc='0'/>
+					<POINT pos='2.00000,3.00000' arc='0'/>
+					<POINT pos='3.00000,2.00000' arc='0'/>
+					<POINT pos='3.00000,1.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<ELLIPSE a='29.00000,21.00000' b='30.00000,22.00000' style='3' fill='2'/>
+				<POLYGON pos='31.00000,20.00000' style='3' fill='1'>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,1.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='1.00000,3.00000' arc='0'/>
+					<POINT pos='2.00000,3.00000' arc='0'/>
+					<POINT pos='3.00000,2.00000' arc='0'/>
+					<POINT pos='3.00000,1.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<ELLIPSE a='32.00000,21.00000' b='33.00000,22.00000' style='3' fill='2'/>
+				<POLYGON pos='34.00000,20.00000' style='3' fill='1'>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,1.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='1.00000,3.00000' arc='0'/>
+					<POINT pos='2.00000,3.00000' arc='0'/>
+					<POINT pos='3.00000,2.00000' arc='0'/>
+					<POINT pos='3.00000,1.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<ELLIPSE a='35.00000,21.00000' b='36.00000,22.00000' style='3' fill='2'/>
+				<POLYGON pos='37.00000,20.00000' style='3' fill='1'>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,1.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='1.00000,3.00000' arc='0'/>
+					<POINT pos='2.00000,3.00000' arc='0'/>
+					<POINT pos='3.00000,2.00000' arc='0'/>
+					<POINT pos='3.00000,1.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<ELLIPSE a='38.00000,21.00000' b='39.00000,22.00000' style='3' fill='2'/>
+			</TinyCAD>
+		</SYMBOLDEF>
+		<SYMBOLDEF id='11'>
+			<NAME type='0'>BREAKAWAY_HDR</NAME>
+			<REF type='0'>U?</REF>
+			<DESCRIPTION>New symbol</DESCRIPTION>
+			<PPP>1</PPP>
+			<FIELD>
+				<NAME>$$SPICE_PROLOG_PRIORITY</NAME>
+				<DEFAULT>5</DEFAULT>
+				<FT>000002</FT>
+				<VALUE></VALUE>
+				<POS>0.00000,0.00000</POS>
+			</FIELD>
+			<FIELD>
+				<NAME>$$SPICE_EPILOG_PRIORITY</NAME>
+				<DEFAULT>5</DEFAULT>
+				<FT>000002</FT>
+				<VALUE></VALUE>
+				<POS>0.00000,0.00000</POS>
+			</FIELD>
+			<FIELD>
+				<NAME>Package</NAME>
+				<DEFAULT>package name for PCB layout</DEFAULT>
+				<FT>000001</FT>
+				<VALUE></VALUE>
+				<POS>0.00000,0.00000</POS>
+			</FIELD>
+			<REF_POINT power='0' part='0' pos='70.00000,24.00000'/>
+			<TinyCAD>
+				<POLYGON pos='64.00000,20.00000' style='5' fill='1'>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,1.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='1.00000,3.00000' arc='0'/>
+					<POINT pos='2.00000,3.00000' arc='0'/>
+					<POINT pos='3.00000,2.00000' arc='0'/>
+					<POINT pos='3.00000,1.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<ELLIPSE a='65.00000,21.00000' b='66.00000,22.00000' style='5' fill='2'/>
+				<POLYGON pos='67.00000,20.00000' style='5' fill='1'>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,1.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='1.00000,3.00000' arc='0'/>
+					<POINT pos='2.00000,3.00000' arc='0'/>
+					<POINT pos='3.00000,2.00000' arc='0'/>
+					<POINT pos='3.00000,1.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<ELLIPSE a='68.00000,21.00000' b='69.00000,22.00000' style='5' fill='2'/>
+				<POLYGON pos='40.00000,20.00000' style='5' fill='1'>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,1.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='1.00000,3.00000' arc='0'/>
+					<POINT pos='2.00000,3.00000' arc='0'/>
+					<POINT pos='3.00000,2.00000' arc='0'/>
+					<POINT pos='3.00000,1.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<ELLIPSE a='41.00000,21.00000' b='42.00000,22.00000' style='5' fill='2'/>
+				<POLYGON pos='43.00000,20.00000' style='5' fill='1'>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,1.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='1.00000,3.00000' arc='0'/>
+					<POINT pos='2.00000,3.00000' arc='0'/>
+					<POINT pos='3.00000,2.00000' arc='0'/>
+					<POINT pos='3.00000,1.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<ELLIPSE a='44.00000,21.00000' b='45.00000,22.00000' style='5' fill='2'/>
+				<POLYGON pos='46.00000,20.00000' style='5' fill='1'>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,1.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='1.00000,3.00000' arc='0'/>
+					<POINT pos='2.00000,3.00000' arc='0'/>
+					<POINT pos='3.00000,2.00000' arc='0'/>
+					<POINT pos='3.00000,1.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<ELLIPSE a='47.00000,21.00000' b='48.00000,22.00000' style='5' fill='2'/>
+				<POLYGON pos='49.00000,20.00000' style='5' fill='1'>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,1.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='1.00000,3.00000' arc='0'/>
+					<POINT pos='2.00000,3.00000' arc='0'/>
+					<POINT pos='3.00000,2.00000' arc='0'/>
+					<POINT pos='3.00000,1.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<ELLIPSE a='50.00000,21.00000' b='51.00000,22.00000' style='5' fill='2'/>
+				<POLYGON pos='52.00000,20.00000' style='5' fill='1'>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,1.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='1.00000,3.00000' arc='0'/>
+					<POINT pos='2.00000,3.00000' arc='0'/>
+					<POINT pos='3.00000,2.00000' arc='0'/>
+					<POINT pos='3.00000,1.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<ELLIPSE a='53.00000,21.00000' b='54.00000,22.00000' style='5' fill='2'/>
+				<POLYGON pos='55.00000,20.00000' style='5' fill='1'>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,1.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='1.00000,3.00000' arc='0'/>
+					<POINT pos='2.00000,3.00000' arc='0'/>
+					<POINT pos='3.00000,2.00000' arc='0'/>
+					<POINT pos='3.00000,1.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<ELLIPSE a='56.00000,21.00000' b='57.00000,22.00000' style='5' fill='2'/>
+				<POLYGON pos='58.00000,20.00000' style='5' fill='1'>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,1.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='1.00000,3.00000' arc='0'/>
+					<POINT pos='2.00000,3.00000' arc='0'/>
+					<POINT pos='3.00000,2.00000' arc='0'/>
+					<POINT pos='3.00000,1.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<ELLIPSE a='59.00000,21.00000' b='60.00000,22.00000' style='5' fill='2'/>
+				<POLYGON pos='61.00000,20.00000' style='5' fill='1'>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,1.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='1.00000,3.00000' arc='0'/>
+					<POINT pos='2.00000,3.00000' arc='0'/>
+					<POINT pos='3.00000,2.00000' arc='0'/>
+					<POINT pos='3.00000,1.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<ELLIPSE a='62.00000,21.00000' b='63.00000,22.00000' style='5' fill='2'/>
+				<POLYGON pos='16.00000,20.00000' style='5' fill='1'>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,1.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='1.00000,3.00000' arc='0'/>
+					<POINT pos='2.00000,3.00000' arc='0'/>
+					<POINT pos='3.00000,2.00000' arc='0'/>
+					<POINT pos='3.00000,1.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<ELLIPSE a='17.00000,21.00000' b='18.00000,22.00000' style='5' fill='2'/>
+				<POLYGON pos='19.00000,20.00000' style='5' fill='1'>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,1.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='1.00000,3.00000' arc='0'/>
+					<POINT pos='2.00000,3.00000' arc='0'/>
+					<POINT pos='3.00000,2.00000' arc='0'/>
+					<POINT pos='3.00000,1.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<ELLIPSE a='20.00000,21.00000' b='21.00000,22.00000' style='5' fill='2'/>
+				<POLYGON pos='22.00000,20.00000' style='5' fill='1'>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,1.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='1.00000,3.00000' arc='0'/>
+					<POINT pos='2.00000,3.00000' arc='0'/>
+					<POINT pos='3.00000,2.00000' arc='0'/>
+					<POINT pos='3.00000,1.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<ELLIPSE a='23.00000,21.00000' b='24.00000,22.00000' style='5' fill='2'/>
+				<POLYGON pos='25.00000,20.00000' style='5' fill='1'>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,1.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='1.00000,3.00000' arc='0'/>
+					<POINT pos='2.00000,3.00000' arc='0'/>
+					<POINT pos='3.00000,2.00000' arc='0'/>
+					<POINT pos='3.00000,1.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<ELLIPSE a='26.00000,21.00000' b='27.00000,22.00000' style='5' fill='2'/>
+				<POLYGON pos='28.00000,20.00000' style='5' fill='1'>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,1.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='1.00000,3.00000' arc='0'/>
+					<POINT pos='2.00000,3.00000' arc='0'/>
+					<POINT pos='3.00000,2.00000' arc='0'/>
+					<POINT pos='3.00000,1.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<ELLIPSE a='29.00000,21.00000' b='30.00000,22.00000' style='5' fill='2'/>
+				<POLYGON pos='31.00000,20.00000' style='5' fill='1'>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,1.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='1.00000,3.00000' arc='0'/>
+					<POINT pos='2.00000,3.00000' arc='0'/>
+					<POINT pos='3.00000,2.00000' arc='0'/>
+					<POINT pos='3.00000,1.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<ELLIPSE a='32.00000,21.00000' b='33.00000,22.00000' style='5' fill='2'/>
+				<POLYGON pos='34.00000,20.00000' style='5' fill='1'>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,1.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='1.00000,3.00000' arc='0'/>
+					<POINT pos='2.00000,3.00000' arc='0'/>
+					<POINT pos='3.00000,2.00000' arc='0'/>
+					<POINT pos='3.00000,1.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<ELLIPSE a='35.00000,21.00000' b='36.00000,22.00000' style='5' fill='2'/>
+				<POLYGON pos='37.00000,20.00000' style='5' fill='1'>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,1.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='1.00000,3.00000' arc='0'/>
+					<POINT pos='2.00000,3.00000' arc='0'/>
+					<POINT pos='3.00000,2.00000' arc='0'/>
+					<POINT pos='3.00000,1.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<ELLIPSE a='38.00000,21.00000' b='39.00000,22.00000' style='5' fill='2'/>
+			</TinyCAD>
+		</SYMBOLDEF>
+		<SYMBOLDEF id='12'>
+			<NAME type='0'>LCM-x01601DXX</NAME>
+			<REF type='0'>U?</REF>
+			<DESCRIPTION>LCD Screen Peripheral Interface Adapter</DESCRIPTION>
+			<PPP>1</PPP>
+			<FIELD>
+				<NAME>$$SPICE_PROLOG_PRIORITY</NAME>
+				<DEFAULT>5</DEFAULT>
+				<FT>000002</FT>
+				<VALUE></VALUE>
+				<POS>0.00000,0.00000</POS>
+			</FIELD>
+			<FIELD>
+				<NAME>$$SPICE_EPILOG_PRIORITY</NAME>
+				<DEFAULT>5</DEFAULT>
+				<FT>000002</FT>
+				<VALUE></VALUE>
+				<POS>0.00000,0.00000</POS>
+			</FIELD>
+			<FIELD>
+				<NAME>Package</NAME>
+				<DEFAULT>matt_lcd</DEFAULT>
+				<FT>000001</FT>
+				<VALUE></VALUE>
+				<POS>0.00000,0.00000</POS>
+			</FIELD>
+			<REF_POINT power='0' part='0' pos='62.00000,104.00000'/>
+			<REF_POINT power='1' part='0' pos='62.00000,104.00000'/>
+			<TinyCAD>
+				<RECTANGLE a='33.00000,33.00000' b='61.00000,103.00000' style='4' fill='0'/>
+				<PIN pos='22.00000,44.00000' which='0' elec='5' direction='3' part='0' number='2' show='3' length='60' number_pos='18' centre_name='0'>VDD</PIN>
+				<PIN pos='22.00000,48.00000' which='0' elec='5' direction='3' part='0' number='3' show='3' length='60' number_pos='18' centre_name='0'>CONTRAST</PIN>
+				<PIN pos='22.00000,52.00000' which='0' elec='5' direction='3' part='0' number='4' show='3' length='60' number_pos='18' centre_name='0'>RS</PIN>
+				<PIN pos='22.00000,56.00000' which='0' elec='5' direction='3' part='0' number='5' show='3' length='60' number_pos='18' centre_name='0'>RW&#039;</PIN>
+				<PIN pos='22.00000,60.00000' which='0' elec='5' direction='3' part='0' number='6' show='3' length='60' number_pos='18' centre_name='0'>E</PIN>
+				<PIN pos='22.00000,64.00000' which='0' elec='5' direction='3' part='0' number='7' show='3' length='60' number_pos='18' centre_name='0'>D0</PIN>
+				<PIN pos='22.00000,68.00000' which='0' elec='5' direction='3' part='0' number='8' show='3' length='60' number_pos='18' centre_name='0'>D1</PIN>
+				<PIN pos='22.00000,72.00000' which='0' elec='5' direction='3' part='0' number='9' show='3' length='60' number_pos='18' centre_name='0'>D2</PIN>
+				<PIN pos='22.00000,76.00000' which='0' elec='5' direction='3' part='0' number='10' show='3' length='60' number_pos='18' centre_name='0'>D3</PIN>
+				<PIN pos='22.00000,80.00000' which='0' elec='5' direction='3' part='0' number='11' show='3' length='60' number_pos='18' centre_name='0'>D4</PIN>
+				<PIN pos='22.00000,84.00000' which='0' elec='5' direction='3' part='0' number='12' show='3' length='60' number_pos='18' centre_name='0'>D5</PIN>
+				<PIN pos='22.00000,88.00000' which='0' elec='5' direction='3' part='0' number='13' show='3' length='60' number_pos='18' centre_name='0'>D6</PIN>
+				<PIN pos='22.00000,92.00000' which='0' elec='5' direction='3' part='0' number='14' show='3' length='60' number_pos='18' centre_name='0'>D7</PIN>
+				<PIN pos='22.00000,96.00000' which='0' elec='5' direction='3' part='0' number='15' show='3' length='60' number_pos='18' centre_name='0'>ANODE</PIN>
+				<PIN pos='22.00000,100.00000' which='0' elec='5' direction='3' part='0' number='16' show='3' length='60' number_pos='18' centre_name='0'>KATHODE</PIN>
+				<LABEL pos='47.00000,41.00000' direction='3' font='3' color='208000' style='0'>LCM</LABEL>
+				<PIN pos='22.00000,40.00000' which='0' elec='5' direction='3' part='0' number='1' show='3' length='60' number_pos='18' centre_name='0'>VSS</PIN>
+			</TinyCAD>
+		</SYMBOLDEF>
+		<SYMBOLDEF id='13'>
+			<NAME type='0'>BREAKAWAY_HDR</NAME>
+			<REF type='0'>U?</REF>
+			<DESCRIPTION>New symbol</DESCRIPTION>
+			<PPP>1</PPP>
+			<FIELD>
+				<NAME>$$SPICE_PROLOG_PRIORITY</NAME>
+				<DEFAULT>5</DEFAULT>
+				<FT>000002</FT>
+				<VALUE></VALUE>
+				<POS>0.00000,0.00000</POS>
+			</FIELD>
+			<FIELD>
+				<NAME>$$SPICE_EPILOG_PRIORITY</NAME>
+				<DEFAULT>5</DEFAULT>
+				<FT>000002</FT>
+				<VALUE></VALUE>
+				<POS>0.00000,0.00000</POS>
+			</FIELD>
+			<FIELD>
+				<NAME>Package</NAME>
+				<DEFAULT>package name for PCB layout</DEFAULT>
+				<FT>000001</FT>
+				<VALUE></VALUE>
+				<POS>0.00000,0.00000</POS>
+			</FIELD>
+			<REF_POINT power='0' part='0' pos='70.00000,24.00000'/>
+			<TinyCAD>
+				<POLYGON pos='64.00000,20.00000' style='5' fill='1'>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,1.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='1.00000,3.00000' arc='0'/>
+					<POINT pos='2.00000,3.00000' arc='0'/>
+					<POINT pos='3.00000,2.00000' arc='0'/>
+					<POINT pos='3.00000,1.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<ELLIPSE a='65.00000,21.00000' b='66.00000,22.00000' style='5' fill='2'/>
+				<POLYGON pos='67.00000,20.00000' style='5' fill='1'>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,1.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='1.00000,3.00000' arc='0'/>
+					<POINT pos='2.00000,3.00000' arc='0'/>
+					<POINT pos='3.00000,2.00000' arc='0'/>
+					<POINT pos='3.00000,1.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<ELLIPSE a='68.00000,21.00000' b='69.00000,22.00000' style='5' fill='2'/>
+				<POLYGON pos='40.00000,20.00000' style='5' fill='1'>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,1.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='1.00000,3.00000' arc='0'/>
+					<POINT pos='2.00000,3.00000' arc='0'/>
+					<POINT pos='3.00000,2.00000' arc='0'/>
+					<POINT pos='3.00000,1.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<ELLIPSE a='41.00000,21.00000' b='42.00000,22.00000' style='5' fill='2'/>
+				<POLYGON pos='43.00000,20.00000' style='5' fill='1'>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,1.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='1.00000,3.00000' arc='0'/>
+					<POINT pos='2.00000,3.00000' arc='0'/>
+					<POINT pos='3.00000,2.00000' arc='0'/>
+					<POINT pos='3.00000,1.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<ELLIPSE a='44.00000,21.00000' b='45.00000,22.00000' style='5' fill='2'/>
+				<POLYGON pos='46.00000,20.00000' style='5' fill='1'>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,1.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='1.00000,3.00000' arc='0'/>
+					<POINT pos='2.00000,3.00000' arc='0'/>
+					<POINT pos='3.00000,2.00000' arc='0'/>
+					<POINT pos='3.00000,1.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<ELLIPSE a='47.00000,21.00000' b='48.00000,22.00000' style='5' fill='2'/>
+				<POLYGON pos='49.00000,20.00000' style='5' fill='1'>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,1.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='1.00000,3.00000' arc='0'/>
+					<POINT pos='2.00000,3.00000' arc='0'/>
+					<POINT pos='3.00000,2.00000' arc='0'/>
+					<POINT pos='3.00000,1.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<ELLIPSE a='50.00000,21.00000' b='51.00000,22.00000' style='5' fill='2'/>
+				<POLYGON pos='52.00000,20.00000' style='5' fill='1'>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,1.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='1.00000,3.00000' arc='0'/>
+					<POINT pos='2.00000,3.00000' arc='0'/>
+					<POINT pos='3.00000,2.00000' arc='0'/>
+					<POINT pos='3.00000,1.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<ELLIPSE a='53.00000,21.00000' b='54.00000,22.00000' style='5' fill='2'/>
+				<POLYGON pos='55.00000,20.00000' style='5' fill='1'>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,1.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='1.00000,3.00000' arc='0'/>
+					<POINT pos='2.00000,3.00000' arc='0'/>
+					<POINT pos='3.00000,2.00000' arc='0'/>
+					<POINT pos='3.00000,1.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<ELLIPSE a='56.00000,21.00000' b='57.00000,22.00000' style='5' fill='2'/>
+				<POLYGON pos='58.00000,20.00000' style='5' fill='1'>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,1.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='1.00000,3.00000' arc='0'/>
+					<POINT pos='2.00000,3.00000' arc='0'/>
+					<POINT pos='3.00000,2.00000' arc='0'/>
+					<POINT pos='3.00000,1.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<ELLIPSE a='59.00000,21.00000' b='60.00000,22.00000' style='5' fill='2'/>
+				<POLYGON pos='61.00000,20.00000' style='5' fill='1'>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,1.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='1.00000,3.00000' arc='0'/>
+					<POINT pos='2.00000,3.00000' arc='0'/>
+					<POINT pos='3.00000,2.00000' arc='0'/>
+					<POINT pos='3.00000,1.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<ELLIPSE a='62.00000,21.00000' b='63.00000,22.00000' style='5' fill='2'/>
+				<POLYGON pos='16.00000,20.00000' style='5' fill='1'>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,1.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='1.00000,3.00000' arc='0'/>
+					<POINT pos='2.00000,3.00000' arc='0'/>
+					<POINT pos='3.00000,2.00000' arc='0'/>
+					<POINT pos='3.00000,1.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<ELLIPSE a='17.00000,21.00000' b='18.00000,22.00000' style='5' fill='2'/>
+				<POLYGON pos='19.00000,20.00000' style='5' fill='1'>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,1.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='1.00000,3.00000' arc='0'/>
+					<POINT pos='2.00000,3.00000' arc='0'/>
+					<POINT pos='3.00000,2.00000' arc='0'/>
+					<POINT pos='3.00000,1.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<ELLIPSE a='20.00000,21.00000' b='21.00000,22.00000' style='5' fill='2'/>
+				<POLYGON pos='22.00000,20.00000' style='5' fill='1'>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,1.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='1.00000,3.00000' arc='0'/>
+					<POINT pos='2.00000,3.00000' arc='0'/>
+					<POINT pos='3.00000,2.00000' arc='0'/>
+					<POINT pos='3.00000,1.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<ELLIPSE a='23.00000,21.00000' b='24.00000,22.00000' style='5' fill='2'/>
+				<POLYGON pos='25.00000,20.00000' style='5' fill='1'>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,1.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='1.00000,3.00000' arc='0'/>
+					<POINT pos='2.00000,3.00000' arc='0'/>
+					<POINT pos='3.00000,2.00000' arc='0'/>
+					<POINT pos='3.00000,1.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<ELLIPSE a='26.00000,21.00000' b='27.00000,22.00000' style='5' fill='2'/>
+				<POLYGON pos='28.00000,20.00000' style='5' fill='1'>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,1.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='1.00000,3.00000' arc='0'/>
+					<POINT pos='2.00000,3.00000' arc='0'/>
+					<POINT pos='3.00000,2.00000' arc='0'/>
+					<POINT pos='3.00000,1.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<ELLIPSE a='29.00000,21.00000' b='30.00000,22.00000' style='5' fill='2'/>
+				<POLYGON pos='31.00000,20.00000' style='5' fill='1'>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,1.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='1.00000,3.00000' arc='0'/>
+					<POINT pos='2.00000,3.00000' arc='0'/>
+					<POINT pos='3.00000,2.00000' arc='0'/>
+					<POINT pos='3.00000,1.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<ELLIPSE a='32.00000,21.00000' b='33.00000,22.00000' style='5' fill='2'/>
+				<POLYGON pos='34.00000,20.00000' style='5' fill='1'>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,1.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='1.00000,3.00000' arc='0'/>
+					<POINT pos='2.00000,3.00000' arc='0'/>
+					<POINT pos='3.00000,2.00000' arc='0'/>
+					<POINT pos='3.00000,1.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<ELLIPSE a='35.00000,21.00000' b='36.00000,22.00000' style='5' fill='2'/>
+				<POLYGON pos='37.00000,20.00000' style='5' fill='1'>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,1.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='1.00000,3.00000' arc='0'/>
+					<POINT pos='2.00000,3.00000' arc='0'/>
+					<POINT pos='3.00000,2.00000' arc='0'/>
+					<POINT pos='3.00000,1.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<ELLIPSE a='38.00000,21.00000' b='39.00000,22.00000' style='5' fill='2'/>
+			</TinyCAD>
+		</SYMBOLDEF>
+		<SYMBOLDEF id='17'>
+			<NAME type='0'>C3</NAME>
+			<REF type='0'>C?</REF>
+			<DESCRIPTION>Small Capacitor</DESCRIPTION>
+			<PPP>1</PPP>
+			<REF_POINT power='0' part='0' pos='24.00000,37.00000'/>
+			<TinyCAD>
+				<PIN pos='22.00000,37.00000' which='0' elec='0' direction='0' part='0' number='1' show='1' length='30' number_pos='0' centre_name='0'></PIN>
+				<PIN pos='22.00000,24.00000' which='0' elec='0' direction='1' part='0' number='2' show='1' length='30' number_pos='0' centre_name='0'></PIN>
+				<POLYGON pos='20.00000,30.00000' style='3' fill='0'>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+					<POINT pos='4.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='20.00000,31.00000' style='3' fill='0'>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+					<POINT pos='4.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='22.00000,31.00000' style='3' fill='0'>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,1.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='22.00000,29.00000' style='3' fill='0'>
+					<POINT pos='0.00000,1.00000' arc='0'/>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+				</POLYGON>
+			</TinyCAD>
+		</SYMBOLDEF>
+		<OPTIONS>
+			<GRID>0</GRID>
+			<UNITS>0</UNITS>
+			<COLOR_WIRE>FF0000</COLOR_WIRE>
+			<COLOR_BUS>0000FF</COLOR_BUS>
+			<COLOR_JUNCTION>000000</COLOR_JUNCTION>
+			<COLOR_NOCONNECT>000000</COLOR_NOCONNECT>
+			<COLOR_LABEL>208000</COLOR_LABEL>
+			<COLOR_POWER>000000</COLOR_POWER>
+			<COLOR_PIN>4040C0</COLOR_PIN>
+			<COLOR_HIDDEN_PIN>208020</COLOR_HIDDEN_PIN>
+			<COLOR_BACKGROUND>FFFFFF</COLOR_BACKGROUND>
+			<COLOR_NOTETEXT_FILL>AFFFFF</COLOR_NOTETEXT_FILL>
+			<COLOR_NOTETEXT_LINE>FF0000</COLOR_NOTETEXT_LINE>
+			<COLOR_NOTETEXT_TEXT>FF0000</COLOR_NOTETEXT_TEXT>
+		</OPTIONS>
+		<SYMBOL id='1' pos='172.00000,144.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+			<FIELD type='0' description='Ref' value='U1' show='1' pos='-39.00000,-105.60000'/>
+			<FIELD type='0' description='Name' value='STM32F051C6' show='1' pos='-47.00000,-108.00000'/>
+			<FIELD type='2' description='$$SPICE_PROLOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
+			<FIELD type='2' description='$$SPICE_EPILOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
+			<FIELD type='1' description='Package' value='matt' show='0' pos='1.00000,-99.20000'/>
+		</SYMBOL>
+		<SYMBOL id='2' pos='48.00000,100.00000' part='0' rotate='5' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+			<FIELD type='0' description='Ref' value='J1' show='1' pos='1.00000,-2.00000'/>
+			<FIELD type='0' description='Name' value='LIGHT SENSOR INPUT' show='1' pos='-31.00000,-2.00000'/>
+			<FIELD type='2' description='$$SPICE_PROLOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
+			<FIELD type='2' description='$$SPICE_EPILOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
+			<FIELD type='1' description='Package' value='SIP1' show='0' pos='1.00000,0.40000'/>
+		</SYMBOL>
+		<SYMBOL id='3' pos='94.00000,84.00000' part='0' rotate='3' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+			<FIELD type='0' description='Ref' value='SW0' show='1' pos='-20.00000,-2.00000'/>
+			<FIELD type='0' description='Name' value='SWITCH1' show='0' pos='-20.00000,-6.00000'/>
+		</SYMBOL>
+		<SYMBOL id='3' pos='94.00000,88.00000' part='0' rotate='3' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+			<FIELD type='0' description='Ref' value='SW1' show='1' pos='-20.00000,-2.00000'/>
+			<FIELD type='0' description='Name' value='SWITCH1' show='0' pos='-20.00000,-6.00000'/>
+		</SYMBOL>
+		<SYMBOL id='3' pos='94.00000,92.00000' part='0' rotate='3' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+			<FIELD type='0' description='Ref' value='SW2' show='1' pos='-20.00000,-2.00000'/>
+			<FIELD type='0' description='Name' value='SWITCH1' show='0' pos='-20.00000,-6.00000'/>
+		</SYMBOL>
+		<SYMBOL id='3' pos='94.00000,96.00000' part='0' rotate='3' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+			<FIELD type='0' description='Ref' value='SW3' show='1' pos='-20.00000,-2.00000'/>
+			<FIELD type='0' description='Name' value='SWITCH1' show='0' pos='-20.00000,-6.00000'/>
+		</SYMBOL>
+		<WIRE a='102.00000,82.00000' b='94.00000,82.00000'/>
+		<WIRE a='102.00000,86.00000' b='94.00000,86.00000'/>
+		<WIRE a='102.00000,90.00000' b='94.00000,90.00000'/>
+		<WIRE a='102.00000,94.00000' b='94.00000,94.00000'/>
+		<WIRE a='74.00000,94.00000' b='70.00000,94.00000'/>
+		<JUNCTION pos='70.00000,94.00000'/>
+		<WIRE a='70.00000,86.00000' b='70.00000,82.00000'/>
+		<WIRE a='70.00000,82.00000' b='74.00000,82.00000'/>
+		<WIRE a='74.00000,86.00000' b='70.00000,86.00000'/>
+		<JUNCTION pos='70.00000,86.00000'/>
+		<WIRE a='70.00000,90.00000' b='70.00000,86.00000'/>
+		<WIRE a='74.00000,90.00000' b='70.00000,90.00000'/>
+		<JUNCTION pos='70.00000,90.00000'/>
+		<WIRE a='70.00000,94.00000' b='70.00000,90.00000'/>
+		<SYMBOL id='4' pos='56.00000,126.00000' part='0' rotate='5' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+			<FIELD type='0' description='Ref' value='J2' show='1' pos='1.00000,-2.00000'/>
+			<FIELD type='0' description='Name' value='LINE SENSOR 1' show='1' pos='-25.00000,-2.00000'/>
+			<FIELD type='2' description='$$SPICE_PROLOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
+			<FIELD type='2' description='$$SPICE_EPILOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
+			<FIELD type='1' description='Package' value='SIP1' show='0' pos='1.00000,0.40000'/>
+		</SYMBOL>
+		<SYMBOL id='6' pos='56.00000,132.00000' part='0' rotate='5' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+			<FIELD type='0' description='Ref' value='J3' show='1' pos='1.00000,-2.00000'/>
+			<FIELD type='0' description='Name' value='LINE SENSOR 2' show='1' pos='-25.00000,-2.00000'/>
+			<FIELD type='2' description='$$SPICE_PROLOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
+			<FIELD type='2' description='$$SPICE_EPILOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
+			<FIELD type='1' description='Package' value='SIP1' show='0' pos='1.00000,0.40000'/>
+		</SYMBOL>
+		<SYMBOL id='6' pos='56.00000,138.00000' part='0' rotate='5' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+			<FIELD type='0' description='Ref' value='J4' show='1' pos='1.00000,-2.00000'/>
+			<FIELD type='0' description='Name' value='LINE SENSOR 3' show='1' pos='-25.00000,-2.00000'/>
+			<FIELD type='2' description='$$SPICE_PROLOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
+			<FIELD type='2' description='$$SPICE_EPILOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
+			<FIELD type='1' description='Package' value='SIP1' show='0' pos='1.00000,0.40000'/>
+		</SYMBOL>
+		<WIRE a='102.00000,102.00000' b='80.00000,102.00000'/>
+		<WIRE a='80.00000,102.00000' b='80.00000,124.00000'/>
+		<WIRE a='102.00000,106.00000' b='82.00000,106.00000'/>
+		<WIRE a='82.00000,106.00000' b='82.00000,130.00000'/>
+		<WIRE a='102.00000,98.00000' b='48.00000,98.00000'/>
+		<WIRE a='80.00000,124.00000' b='56.00000,124.00000'/>
+		<WIRE a='82.00000,130.00000' b='56.00000,130.00000'/>
+		<WIRE a='102.00000,110.00000' b='84.00000,110.00000'/>
+		<WIRE a='84.00000,110.00000' b='84.00000,136.00000'/>
+		<WIRE a='84.00000,136.00000' b='56.00000,136.00000'/>
+		<SYMBOL id='4' pos='60.00000,156.00000' part='0' rotate='5' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+			<FIELD type='0' description='Ref' value='J5' show='1' pos='1.00000,-2.00000'/>
+			<FIELD type='0' description='Name' value='PROX SENSOR' show='1' pos='-25.00000,-2.00000'/>
+			<FIELD type='2' description='$$SPICE_PROLOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
+			<FIELD type='2' description='$$SPICE_EPILOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
+			<FIELD type='1' description='Package' value='SIP1' show='0' pos='1.00000,0.40000'/>
+		</SYMBOL>
+		<WIRE a='102.00000,114.00000' b='92.00000,114.00000'/>
+		<WIRE a='92.00000,114.00000' b='92.00000,154.00000'/>
+		<WIRE a='92.00000,154.00000' b='60.00000,154.00000'/>
+		<WIRE a='102.00000,118.00000' b='94.00000,118.00000'/>
+		<WIRE a='94.00000,118.00000' b='94.00000,168.00000'/>
+		<SYMBOL id='7' pos='86.00000,48.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+			<FIELD type='0' description='Ref' value='Z1' show='1' pos='1.00000,-5.60000'/>
+			<FIELD type='0' description='Name' value='3.3V' show='1' pos='1.00000,-8.00000'/>
+			<FIELD type='2' description='$$SPICE_PROLOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
+			<FIELD type='2' description='$$SPICE_EPILOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
+			<FIELD type='1' description='Package' value='batt' show='0' pos='1.00000,-3.20000'/>
+			<FIELD type='1' description='None' value='None' show='0' pos='1.00000,-0.80000'/>
+		</SYMBOL>
+		<WIRE a='82.00000,38.00000' b='82.00000,32.00000'/>
+		<WIRE a='82.00000,32.00000' b='98.00000,32.00000'/>
+		<WIRE a='98.00000,32.00000' b='98.00000,46.00000'/>
+		<WIRE a='98.00000,46.00000' b='102.00000,46.00000'/>
+		<WIRE a='98.00000,46.00000' b='98.00000,78.00000'/>
+		<WIRE a='98.00000,78.00000' b='102.00000,78.00000'/>
+		<WIRE a='82.00000,52.00000' b='82.00000,74.00000'/>
+		<WIRE a='82.00000,74.00000' b='102.00000,74.00000'/>
+		<WIRE a='98.00000,32.00000' b='178.00000,32.00000'/>
+		<WIRE a='178.00000,32.00000' b='178.00000,46.00000'/>
+		<WIRE a='178.00000,46.00000' b='172.00000,46.00000'/>
+		<JUNCTION pos='98.00000,46.00000'/>
+		<JUNCTION pos='98.00000,32.00000'/>
+		<JUNCTION pos='82.00000,52.00000'/>
+		<WIRE a='82.00000,52.00000' b='78.00000,52.00000'/>
+		<WIRE a='82.00000,48.00000' b='82.00000,52.00000'/>
+		<SYMBOL id='8' pos='56.00000,178.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+			<FIELD type='0' description='Ref' value='R1' show='1' pos='-7.00000,-15.60000'/>
+			<FIELD type='0' description='Name' value='PROX POT' show='1' pos='-7.00000,-14.00000'/>
+		</SYMBOL>
+		<WIRE a='94.00000,168.00000' b='56.00000,168.00000'/>
+		<JUNCTION pos='82.00000,38.00000'/>
+		<WIRE a='82.00000,38.00000' b='16.00000,38.00000'/>
+		<WIRE a='82.00000,39.00000' b='82.00000,38.00000'/>
+		<WIRE a='16.00000,38.00000' b='16.00000,158.00000'/>
+		<WIRE a='34.00000,158.00000' b='46.00000,158.00000'/>
+		<JUNCTION pos='34.00000,158.00000'/>
+		<WIRE a='34.00000,158.00000' b='34.00000,186.00000'/>
+		<WIRE a='16.00000,158.00000' b='34.00000,158.00000'/>
+		<WIRE a='34.00000,186.00000' b='100.00000,186.00000'/>
+		<WIRE a='100.00000,186.00000' b='100.00000,138.00000'/>
+		<WIRE a='100.00000,138.00000' b='102.00000,138.00000'/>
+		<WIRE a='70.00000,94.00000' b='70.00000,102.00000'/>
+		<SYMBOL id='9' pos='124.00000,206.00000' part='0' rotate='3' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+			<FIELD type='0' description='Ref' value='U2' show='1' pos='-4.00000,2.00000'/>
+			<FIELD type='0' description='Name' value='BREAKAWAY_HDR' show='1' pos='-4.00000,-54.00000'/>
+			<FIELD type='2' description='$$SPICE_PROLOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
+			<FIELD type='2' description='$$SPICE_EPILOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
+			<FIELD type='1' description='Package' value='matttulips' show='0' pos='-4.00000,4.40000'/>
+		</SYMBOL>
+		<SYMBOL id='11' pos='150.00000,206.00000' part='0' rotate='3' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+			<FIELD type='0' description='Ref' value='U3' show='1' pos='-4.00000,2.00000'/>
+			<FIELD type='0' description='Name' value='BREAKAWAY_HDR' show='1' pos='-4.00000,-54.00000'/>
+			<FIELD type='2' description='$$SPICE_PROLOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
+			<FIELD type='2' description='$$SPICE_EPILOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
+			<FIELD type='1' description='Package' value='matttulips' show='0' pos='-4.00000,4.40000'/>
+		</SYMBOL>
+		<SYMBOL id='12' pos='278.00000,112.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+			<FIELD type='0' description='Ref' value='U5' show='1' pos='1.00000,-67.60000'/>
+			<FIELD type='0' description='Name' value='LCM-x01601DXX' show='1' pos='1.00000,-70.00000'/>
+			<FIELD type='2' description='$$SPICE_PROLOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
+			<FIELD type='2' description='$$SPICE_EPILOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
+			<FIELD type='1' description='Package' value='matt_lcd' show='0' pos='1.00000,-65.20000'/>
+		</SYMBOL>
+		<POWER pos='70.00000,102.00000' which='4' direction='1'></POWER>
+		<POWER pos='78.00000,52.00000' which='4' direction='1'></POWER>
+		<POWER pos='226.00000,36.00000' which='0' direction='0'>5V</POWER>
+		<POWER pos='46.00000,178.00000' which='4' direction='1'></POWER>
+		<POWER pos='96.00000,176.00000' which='4' direction='1'></POWER>
+		<WIRE a='102.00000,134.00000' b='96.00000,134.00000'/>
+		<WIRE a='96.00000,134.00000' b='96.00000,176.00000'/>
+		<POWER pos='178.00000,50.00000' which='4' direction='1'></POWER>
+		<WIRE a='178.00000,50.00000' b='172.00000,50.00000'/>
+		<POWER pos='234.00000,38.00000' which='4' direction='1'></POWER>
+		<WIRE a='234.00000,38.00000' b='230.00000,38.00000'/>
+		<WIRE a='230.00000,80.00000' b='230.00000,84.00000'/>
+		<WIRE a='230.00000,84.00000' b='238.00000,84.00000'/>
+		<WIRE a='238.00000,80.00000' b='230.00000,80.00000'/>
+		<JUNCTION pos='230.00000,80.00000'/>
+		<WIRE a='230.00000,76.00000' b='230.00000,80.00000'/>
+		<WIRE a='238.00000,76.00000' b='230.00000,76.00000'/>
+		<JUNCTION pos='230.00000,76.00000'/>
+		<WIRE a='230.00000,72.00000' b='230.00000,76.00000'/>
+		<WIRE a='238.00000,72.00000' b='230.00000,72.00000'/>
+		<JUNCTION pos='230.00000,72.00000'/>
+		<WIRE a='230.00000,66.00000' b='230.00000,72.00000'/>
+		<WIRE a='238.00000,64.00000' b='230.00000,64.00000'/>
+		<JUNCTION pos='230.00000,64.00000'/>
+		<WIRE a='230.00000,48.00000' b='230.00000,64.00000'/>
+		<WIRE a='238.00000,48.00000' b='230.00000,48.00000'/>
+		<JUNCTION pos='230.00000,48.00000'/>
+		<WIRE a='230.00000,38.00000' b='230.00000,48.00000'/>
+		<WIRE a='226.00000,40.00000' b='226.00000,52.00000'/>
+		<WIRE a='226.00000,52.00000' b='238.00000,52.00000'/>
+		<SYMBOL id='8' pos='220.00000,66.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+			<FIELD type='0' description='Ref' value='R2' show='1' pos='-7.00000,-15.60000'/>
+			<FIELD type='0' description='Name' value='POT1' show='1' pos='-7.00000,-14.00000'/>
+		</SYMBOL>
+		<WIRE a='210.00000,66.00000' b='230.00000,66.00000'/>
+		<JUNCTION pos='230.00000,66.00000'/>
+		<WIRE a='230.00000,64.00000' b='230.00000,66.00000'/>
+		<WIRE a='238.00000,56.00000' b='220.00000,56.00000'/>
+		<JUNCTION pos='226.00000,40.00000'/>
+		<WIRE a='226.00000,40.00000' b='210.00000,40.00000'/>
+		<WIRE a='226.00000,36.00000' b='226.00000,40.00000'/>
+		<WIRE a='210.00000,40.00000' b='210.00000,46.00000'/>
+		<SYMBOL id='2' pos='198.00000,70.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+			<FIELD type='0' description='Ref' value='J6' show='0' pos='1.00000,0.40000'/>
+			<FIELD type='0' description='Name' value='RS' show='1' pos='1.00000,0.00000'/>
+			<FIELD type='2' description='$$SPICE_PROLOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
+			<FIELD type='2' description='$$SPICE_EPILOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
+			<FIELD type='1' description='Package' value='SIP1' show='0' pos='1.00000,2.80000'/>
+		</SYMBOL>
+		<SYMBOL id='2' pos='198.00000,74.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+			<FIELD type='0' description='Ref' value='J7' show='0' pos='1.00000,0.40000'/>
+			<FIELD type='0' description='Name' value='E' show='1' pos='1.00000,0.00000'/>
+			<FIELD type='2' description='$$SPICE_PROLOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
+			<FIELD type='2' description='$$SPICE_EPILOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
+			<FIELD type='1' description='Package' value='SIP1' show='0' pos='1.00000,2.80000'/>
+		</SYMBOL>
+		<WIRE a='102.00000,54.00000' b='94.00000,54.00000'/>
+		<WIRE a='94.00000,54.00000' b='94.00000,28.00000'/>
+		<WIRE a='184.00000,28.00000' b='184.00000,68.00000'/>
+		<WIRE a='94.00000,28.00000' b='184.00000,28.00000'/>
+		<WIRE a='184.00000,68.00000' b='190.00000,68.00000'/>
+		<WIRE a='102.00000,58.00000' b='92.00000,58.00000'/>
+		<WIRE a='92.00000,58.00000' b='92.00000,26.00000'/>
+		<WIRE a='92.00000,26.00000' b='182.00000,26.00000'/>
+		<WIRE a='182.00000,26.00000' b='182.00000,72.00000'/>
+		<WIRE a='182.00000,72.00000' b='190.00000,72.00000'/>
+		<SYMBOL id='2' pos='198.00000,82.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+			<FIELD type='0' description='Ref' value='J8' show='0' pos='1.00000,0.40000'/>
+			<FIELD type='0' description='Name' value='D4' show='1' pos='1.00000,0.00000'/>
+			<FIELD type='2' description='$$SPICE_PROLOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
+			<FIELD type='2' description='$$SPICE_EPILOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
+			<FIELD type='1' description='Package' value='SIP1' show='0' pos='1.00000,2.80000'/>
+		</SYMBOL>
+		<SYMBOL id='2' pos='198.00000,86.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+			<FIELD type='0' description='Ref' value='J9' show='0' pos='1.00000,0.40000'/>
+			<FIELD type='0' description='Name' value='D5' show='1' pos='1.00000,0.00000'/>
+			<FIELD type='2' description='$$SPICE_PROLOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
+			<FIELD type='2' description='$$SPICE_EPILOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
+			<FIELD type='1' description='Package' value='SIP1' show='0' pos='1.00000,2.80000'/>
+		</SYMBOL>
+		<SYMBOL id='2' pos='198.00000,90.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+			<FIELD type='0' description='Ref' value='J10' show='0' pos='1.00000,0.40000'/>
+			<FIELD type='0' description='Name' value='D6' show='1' pos='1.00000,0.00000'/>
+			<FIELD type='2' description='$$SPICE_PROLOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
+			<FIELD type='2' description='$$SPICE_EPILOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
+			<FIELD type='1' description='Package' value='SIP1' show='0' pos='1.00000,2.80000'/>
+		</SYMBOL>
+		<SYMBOL id='2' pos='198.00000,94.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+			<FIELD type='0' description='Ref' value='J11' show='0' pos='1.00000,0.40000'/>
+			<FIELD type='0' description='Name' value='D7' show='1' pos='1.00000,0.00000'/>
+			<FIELD type='2' description='$$SPICE_PROLOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
+			<FIELD type='2' description='$$SPICE_EPILOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
+			<FIELD type='1' description='Package' value='SIP1' show='0' pos='1.00000,2.80000'/>
+		</SYMBOL>
+		<WIRE a='172.00000,58.00000' b='180.00000,58.00000'/>
+		<WIRE a='180.00000,58.00000' b='180.00000,80.00000'/>
+		<WIRE a='172.00000,54.00000' b='174.00000,54.00000'/>
+		<WIRE a='174.00000,54.00000' b='174.00000,84.00000'/>
+		<WIRE a='174.00000,84.00000' b='190.00000,84.00000'/>
+		<WIRE a='172.00000,106.00000' b='182.00000,106.00000'/>
+		<WIRE a='182.00000,106.00000' b='182.00000,88.00000'/>
+		<WIRE a='182.00000,88.00000' b='190.00000,88.00000'/>
+		<WIRE a='172.00000,86.00000' b='178.00000,86.00000'/>
+		<WIRE a='178.00000,86.00000' b='178.00000,92.00000'/>
+		<WIRE a='178.00000,92.00000' b='190.00000,92.00000'/>
+		<SYMBOL id='13' pos='188.00000,206.00000' part='0' rotate='3' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+			<FIELD type='0' description='Ref' value='U4' show='1' pos='-4.00000,2.00000'/>
+			<FIELD type='0' description='Name' value='BREAKAWAY_HDR' show='1' pos='-4.00000,-54.00000'/>
+			<FIELD type='2' description='$$SPICE_PROLOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
+			<FIELD type='2' description='$$SPICE_EPILOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
+			<FIELD type='1' description='Package' value='matttulips' show='0' pos='-4.00000,4.40000'/>
+		</SYMBOL>
+		<POWER pos='220.00000,100.00000' which='0' direction='0'>5V</POWER>
+		<POWER pos='220.00000,116.00000' which='4' direction='1'></POWER>
+		<SYMBOL id='17' pos='222.00000,114.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+			<FIELD type='0' description='Ref' value='C1' show='1' pos='1.00000,-9.60000'/>
+			<FIELD type='0' description='Name' value='100nF' show='1' pos='1.00000,-8.00000'/>
+		</SYMBOL>
+		<WIRE a='220.00000,101.00000' b='220.00000,100.00000'/>
+		<WIRE a='238.00000,104.00000' b='232.00000,104.00000'/>
+		<WIRE a='232.00000,104.00000' b='232.00000,101.00000'/>
+		<WIRE a='232.00000,101.00000' b='220.00000,101.00000'/>
+		<JUNCTION pos='220.00000,101.00000'/>
+		<WIRE a='238.00000,108.00000' b='232.00000,108.00000'/>
+		<WIRE a='232.00000,108.00000' b='232.00000,112.00000'/>
+		<WIRE a='232.00000,112.00000' b='220.00000,112.00000'/>
+		<WIRE a='220.00000,114.00000' b='220.00000,116.00000'/>
+		<JUNCTION pos='220.00000,114.00000'/>
+		<WIRE a='220.00000,112.00000' b='220.00000,114.00000'/>
+		<SYMBOL id='2' pos='198.00000,112.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+			<FIELD type='0' description='Ref' value='J12' show='0' pos='1.00000,0.40000'/>
+			<FIELD type='0' description='Name' value='1A' show='1' pos='1.00000,0.00000'/>
+			<FIELD type='2' description='$$SPICE_PROLOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
+			<FIELD type='2' description='$$SPICE_EPILOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
+			<FIELD type='1' description='Package' value='SIP1' show='0' pos='1.00000,2.80000'/>
+		</SYMBOL>
+		<SYMBOL id='2' pos='198.00000,116.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+			<FIELD type='0' description='Ref' value='J13' show='0' pos='1.00000,0.40000'/>
+			<FIELD type='0' description='Name' value='2A' show='1' pos='1.00000,0.00000'/>
+			<FIELD type='2' description='$$SPICE_PROLOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
+			<FIELD type='2' description='$$SPICE_EPILOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
+			<FIELD type='1' description='Package' value='SIP1' show='0' pos='1.00000,2.80000'/>
+		</SYMBOL>
+		<SYMBOL id='2' pos='198.00000,120.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+			<FIELD type='0' description='Ref' value='J14' show='0' pos='1.00000,0.40000'/>
+			<FIELD type='0' description='Name' value='3A' show='1' pos='1.00000,0.00000'/>
+			<FIELD type='2' description='$$SPICE_PROLOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
+			<FIELD type='2' description='$$SPICE_EPILOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
+			<FIELD type='1' description='Package' value='SIP1' show='0' pos='1.00000,2.80000'/>
+		</SYMBOL>
+		<SYMBOL id='2' pos='198.00000,124.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+			<FIELD type='0' description='Ref' value='J15' show='0' pos='1.00000,0.40000'/>
+			<FIELD type='0' description='Name' value='4A' show='1' pos='1.00000,0.00000'/>
+			<FIELD type='2' description='$$SPICE_PROLOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
+			<FIELD type='2' description='$$SPICE_EPILOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
+			<FIELD type='1' description='Package' value='SIP1' show='0' pos='1.00000,2.80000'/>
+		</SYMBOL>
+		<WIRE a='190.00000,110.00000' b='172.00000,110.00000'/>
+		<WIRE a='190.00000,114.00000' b='172.00000,114.00000'/>
+		<WIRE a='190.00000,118.00000' b='172.00000,118.00000'/>
+		<WIRE a='190.00000,122.00000' b='172.00000,122.00000'/>
+		<SYMBOL id='2' pos='198.00000,130.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+			<FIELD type='0' description='Ref' value='J16' show='0' pos='1.00000,0.40000'/>
+			<FIELD type='0' description='Name' value='12EN' show='1' pos='1.00000,0.00000'/>
+			<FIELD type='2' description='$$SPICE_PROLOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
+			<FIELD type='2' description='$$SPICE_EPILOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
+			<FIELD type='1' description='Package' value='SIP1' show='0' pos='1.00000,2.80000'/>
+		</SYMBOL>
+		<SYMBOL id='2' pos='198.00000,134.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+			<FIELD type='0' description='Ref' value='J17' show='0' pos='1.00000,0.40000'/>
+			<FIELD type='0' description='Name' value='34EN' show='1' pos='1.00000,0.00000'/>
+			<FIELD type='2' description='$$SPICE_PROLOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
+			<FIELD type='2' description='$$SPICE_EPILOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
+			<FIELD type='1' description='Package' value='SIP1' show='0' pos='1.00000,2.80000'/>
+		</SYMBOL>
+		<WIRE a='172.00000,126.00000' b='178.00000,126.00000'/>
+		<WIRE a='178.00000,126.00000' b='178.00000,128.00000'/>
+		<WIRE a='178.00000,128.00000' b='190.00000,128.00000'/>
+		<WIRE a='172.00000,130.00000' b='178.00000,130.00000'/>
+		<WIRE a='178.00000,130.00000' b='178.00000,132.00000'/>
+		<WIRE a='178.00000,132.00000' b='190.00000,132.00000'/>
+		<WIRE a='180.00000,80.00000' b='190.00000,80.00000'/>
+	</TinyCAD>
+</TinyCADSheets>
