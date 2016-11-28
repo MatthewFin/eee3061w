@@ -33,7 +33,7 @@
 #define CALIBRATE_LINE	1
 #define CALIBRATE_PROX	2
 
-#define LCD_MAIN					-1 // checkehck
+#define LCD_MAIN					-1
 #define LCD_CALIBRATION_MODE_SELECT	0
 #define LCD_CALIBRATION_LIGHT 		1
 #define LCD_CALIBRATION_LINE		2
@@ -400,7 +400,7 @@ void calibrateProxSensor(void){
 	lcd_command(LINE_TWO);
 	lcd_putstring("THE PARAM INDEX");
 
-	init_TIM14(5);
+	init_TIM14(1);
 	tdelay();
 
 	for(;;){
@@ -424,7 +424,7 @@ void calibrateProxSensor(void){
 			lcd_putstring(str);
 			lcd_putstring("]=");
 			char str1[4];
-			sprintf(str1, "%u", proxParams[index]); // UNLIKELY THAT ALL THIS WILL WORK
+			sprintf(str1, "%u", proxParams[index]);
 			lcd_putstring(str1);
 		}
 
@@ -558,9 +558,9 @@ void displayC(int COMMAND){
 
 	case LCD_MAIN:
 		lcd_command(CLEAR);
-		lcd_putstring("1Strt|Calib|Chck");
+		lcd_putstring("1Strt|Calib");
 		lcd_command(LINE_TWO);
-		lcd_putstring("  SW0 |SW1 | SW2");
+		lcd_putstring("  SW0 |SW1");
 		break;
 
 	case LCD_CALIBRATION_MODE_SELECT:
