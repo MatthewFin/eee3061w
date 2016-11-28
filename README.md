@@ -1,3 +1,4 @@
 # eee3061w
 code for robot demo
-blah blah blah
+
+PWM and all gripper stuff still to be completed
