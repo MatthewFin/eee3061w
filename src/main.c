@@ -45,6 +45,7 @@
 #define SENSING_LIGHT 				0
 #define SENSING_LINE_PROX			1
 #define SENSING_BATON_PROX			2
+#define REVERSING					3
 
 #define DELAY		5 // meaning 0.5s
 #define PWM_CHANGETIME				4 // 4x0.5s = 2s delays
@@ -57,8 +58,16 @@ typedef int bool;
 enum{false, true};
 bool nextStage = false;
 
+typedef enum Directions{
+	FORWARDS,
+	BACKWARDS
+} Direction;
+
+
+Direction dir = FORWARDS;
+
 int calibration_mode = -1;
-int sensing_mode = -1;
+int race_mode = -1;
 // STORES THE MOST RECENT READ ADC VALUE
 int ADC_val = 0;
 
@@ -98,6 +107,7 @@ int distance = 15; // important that distance defined high
 int PWM_L_speed = PWM_BASE_SPEED;
 int PWM_R_speed = PWM_BASE_SPEED;
 int PWM_cnt = PWM_CHANGETIME;
+int gripper_cnt = 0;
 // GRIPPER CONTROL
 int PWM_gripper = 0;
 //====================================================================
@@ -115,11 +125,10 @@ void calibrateLightSensor(void);
 void calibrateLineSensor(void);
 void calibrateProxSensor(void);
 
-//TODO: Implement PWM
-
 void raceMode0(void);
 void raceMode1(void);
 void raceMode2(void);
+void raceMode3(void);
 
 void tdelay(void);
 
@@ -156,7 +165,7 @@ void TIM14_IRQHandler(){
 // will deal with all operation and sensing interrupts
 void TIM6_DAC_IRQHandler(){
 
-	switch(sensing_mode){
+	switch(race_mode){
 
 	case SENSING_LIGHT:
 		colour_detected = read_LightSensor(green_adc, red_adc, ambient_adc);
@@ -164,17 +173,24 @@ void TIM6_DAC_IRQHandler(){
 		break;
 
 	case SENSING_LINE_PROX:
+
+		if(dir == FORWARDS){ ////////
 		ADC_val = read_ADC(ADC_CHSELR_PROXSENSOR);
-		lineOutput = read_LineSensor(line_adc, noline_adc);
 		distance = read_ProxSensor(proxParams);
+		}else{ ////////
+			ADC_val = 0;
+		}
+
+		lineOutput = read_LineSensor(line_adc, noline_adc);
 
 		displayR(LCD_LINE_PROX);
-
 
 		if (lineOutput == 0b010){
 			// reset pwm speed
 			PWM_L_speed = PWM_BASE_SPEED;
 			PWM_R_speed = PWM_BASE_SPEED;
+			setPWM1(50);
+			setPWM2(50);
 			// reset timer
 			PWM_cnt = PWM_CHANGETIME;
 		}
@@ -188,10 +204,12 @@ void TIM6_DAC_IRQHandler(){
 
 		if (lineOutput == 0b100){ // right motor faster
 			PWM_R_speed = PWM_R_speed + 10; // TODO: Test and see if should change to const value
+			setPWM2(PWM_R_speed);
 			PWM_cnt = 0; // reset
 		}
 		else if (lineOutput == 0b001){ // left motor faster
 			PWM_L_speed = PWM_L_speed + 10;
+			setPWM1(PWM_L_speed);
 			PWM_cnt = 0; // reset
 		}
 		break;
@@ -199,6 +217,10 @@ void TIM6_DAC_IRQHandler(){
 	case SENSING_BATON_PROX:
 		//TODO: THHINK OF HOW TO IMPLEMENT BATON GRIPPING
 		lcd_putchar('.');
+		gripper_cnt++;
+		if (gripper_cnt > 6){
+			nextStage = true;
+		}
 		break;
 	}
 
@@ -232,6 +254,11 @@ void main (void)
 	init_LightSensor();
 	init_ProxSensor();
 	init_LineSensor();
+	enableGripper();
+	enableMotors();
+	disableGripper();
+	disableMotors();
+	setDir(0);
 
 	for(;;){ // press SW0 to move on
 		if ((GPIOA->IDR & SW0) == 0){
@@ -248,6 +275,7 @@ void main (void)
 		if ((GPIOA->IDR & SW0) == 0){
 			raceMode0();
 			displayC(LCD_MAIN);
+			// now finished with event
 		}
 
 		if ((GPIOA->IDR & SW1) == 0){ // move on only after SW1 pressed
@@ -448,7 +476,7 @@ void calibrateProxSensor(void){
 void raceMode0(void){
 // light detecting stage
 
-	sensing_mode = SENSING_LIGHT;
+	race_mode = SENSING_LIGHT;
 
 	displayR(LCD_LIGHT);
 	tdelay();
@@ -470,6 +498,7 @@ void raceMode0(void){
 		}
 		if (nextStage == true){
 			unclk_TIM6();
+			dir = FORWARDS;
 			raceMode1();
 			return;
 		}
@@ -481,7 +510,7 @@ void raceMode1(){
 
 	nextStage = false;
 
-	sensing_mode = SENSING_LINE_PROX;
+	race_mode = SENSING_LINE_PROX;
 
 	displayR(LCD_LINE_PROX);
 	tdelay();
@@ -490,6 +519,14 @@ void raceMode1(){
 
 	init_LineSensor();
 	init_ProxSensor();
+	init_PWM();
+	enableMotors();
+
+	if (dir == BACKWARDS){
+		setDir(1); // set direction of motors
+	}else{
+		setDir(0);
+	}
 
 	for(;;){
 
@@ -498,7 +535,12 @@ void raceMode1(){
 			lcd_command(CLEAR);
 			lcd_putstring("Exiting");
 			lcd_command(LINE_TWO);
-			lcd_putstring("  Race Mode1...");
+
+			if (dir == FORWARDS){ ////////
+			lcd_putstring("  Race Mode1..F");
+			}else{
+				lcd_putstring("  Race Mode1..B");
+			}
 			unclk_TIM6();
 			tdelay();
 			return;
@@ -506,7 +548,11 @@ void raceMode1(){
 
 		if (nextStage == true){
 			unclk_TIM6();
+			if (dir == FORWARDS){ ///////
 			raceMode2();
+			}else {
+				raceMode3();
+			}
 			return;
 		}
 	}
@@ -517,13 +563,28 @@ void raceMode2(){
 
 	nextStage = false;
 
-	sensing_mode = SENSING_BATON_PROX;
+	race_mode = SENSING_BATON_PROX;
 
 	displayR(LCD_BATON_PROX);
 	tdelay();
 
 	init_TIM6(5);
 	// TODO:gripper stage
+
+
+	// enable the gripper motors and turn them on
+	disableMotors();
+
+	enableGripper();
+	setPWM1(0);
+	setPWM2(0);
+	tdelay();	tdelay();	tdelay();
+	setPWM1(100);
+	tdelay();	tdelay();	tdelay();	tdelay();	tdelay();
+	setPWM2(100);
+	tdelay();	tdelay();	tdelay();	tdelay();
+
+	disableGripper(); /// TODO: possibly don't want to ude this
 
 	for(;;){
 
@@ -532,18 +593,42 @@ void raceMode2(){
 			lcd_command(CLEAR);
 			lcd_putstring("Exiting");
 			lcd_command(LINE_TWO);
-			lcd_putstring("  Race Mode...");
+			lcd_putstring("  Race Mode2...");
 			unclk_TIM6();
 			tdelay();
 			return;
 		}
 
-		//if (nextStage == true){
-			//unclk_TIM6();
-			//raceMode3();
-			//return;
-		//}
+		if (nextStage == true){
+			unclk_TIM6();
+			dir = BACKWARDS; ////////
+			raceMode1(); //////
+			return;
+		}
 	}
+}
+
+
+void raceMode3(){
+// ending
+
+	nextStage = false;
+
+	disableMotors();
+	setPWM1(0);
+	setPWM2(0);
+
+	lcd_command(CLEAR);
+	lcd_putstring("Finished...");
+	lcd_command(LINE_TWO);
+	tdelay();
+	tdelay();
+	lcd_putstring("Hopefully");
+	tdelay();
+	tdelay();
+
+	disableMotors();
+	disableGripper(); ///// TODO: check that gripper holds without there being power
 
 }
 
@@ -558,9 +643,9 @@ void displayC(int COMMAND){
 
 	case LCD_MAIN:
 		lcd_command(CLEAR);
-		lcd_putstring("1Strt|Calib|Chck");
+		lcd_putstring("1Strt|Calib");
 		lcd_command(LINE_TWO);
-		lcd_putstring("  SW0 |SW1 | SW2");
+		lcd_putstring("  SW0 |SW1");
 		break;
 
 	case LCD_CALIBRATION_MODE_SELECT:
@@ -614,7 +699,7 @@ void displayC(int COMMAND){
 
 }
 
-void displayR(int COMMAND){//
+void displayR(int COMMAND){
 
 	switch(COMMAND){
 
@@ -678,7 +763,11 @@ void displayR(int COMMAND){//
 		lcd_putstring1(str2,2);
 		lcd_putchar('%');
 
-		if (distance < BATON_DISTANCE){
+		if ((distance < BATON_DISTANCE) & (dir == FORWARDS)){///////
+			nextStage = true;
+		}
+		if ((lineOutput == 0b111) & (dir == BACKWARDS)){ /////////
+			// TODO: must add some number of times for this to occur
 			nextStage = true;
 		}
 		break;
