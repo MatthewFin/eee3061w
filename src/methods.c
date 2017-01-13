@@ -21,13 +21,11 @@
 //====================================================================
 // GLOBAL CONSTANTS
 //====================================================================
-
+uint16_t TIM_ARR_VAL = 47999;
 
 //====================================================================
 // GLOBAL VARIABLES
 //====================================================================
-
-
 
 
 //====================================================================
@@ -341,5 +339,120 @@ int read_LineSensor(int line, int noline){
 
 	return output;
 }
+
+//====================================================================
+// INITALISE PWM - init_PWM()
+//====================================================================
+// DESCRIPTION: Initialises TIM2 to be in PWM mode on channels 3 and 4
+//				which are linked to PB10 and PB11. These pins are also
+// 				then configured to be in the correct mode
+//====================================================================
+void init_PWM(){
+
+	//enable GPIOA
+	RCC->AHBENR |= RCC_AHBENR_GPIOAEN;
+
+	#define GPIO_AFRH_PIN8_AF2  	0b0010;
+	#define GPIO_AFRH_PIN9_AF2 		0b0010<<4;
+
+			RCC->AHBENR |= RCC_AHBENR_GPIOAEN; //
+			RCC->APB2ENR |= RCC_APB2ENR_TIM1EN; // ENABLE CLOCK TIM1
+			GPIOA->MODER |= GPIO_MODER_MODER8_1; // SET PA8 TO AF MODE
+			GPIOA->MODER |= GPIO_MODER_MODER9_1; // SET PA9 TO AF MODE
+			GPIOA->AFR[1] |= GPIO_AFRH_PIN8_AF2; // SET PA8 TO AF2
+			GPIOA->AFR[1] |= GPIO_AFRH_PIN9_AF2; // set PA9 to AF2
+
+            // GPIOA->OSPEEDR |= GPIO_OSPEEDER_OSPEEDR8;               // Pin A8 speed = 50MHz
+
+			TIM1->CCMR1 &= ~TIM_CCMR1_CC1S; // config TIM1 ch1 for OC
+			TIM1->CCMR1 &= ~TIM_CCMR1_CC2S; // config TIM1 ch2 for OC
+
+			TIM1->CCMR1 |= (TIM_CCMR1_OC1M_1 | TIM_CCMR1_OC1M_2); // x PWM
+			TIM1->CCMR1 &= ~TIM_CCMR1_OC1M_0; // PWM mode 1 ?
+			TIM1->CCMR1 |= (TIM_CCMR1_OC2M_1 | TIM_CCMR1_OC2M_2); // select PWM  mode for ch2
+			TIM1->CCMR1 &= ~TIM_CCMR1_OC2M_0;
+
+			TIM1->PSC |= 200;
+			TIM1->ARR = TIM_ARR_VAL;
+			TIM1->CCR1 = 24000;
+			setPWM2(50);
+			//TIM1->CCR2 = 24000;
+
+			TIM1->CR1 &= ~TIM_CR1_CMS;		// set edge-alinged PWM
+
+			TIM1->CCER &= ~TIM_CCER_CC1P;	// set ch1 active high
+			TIM1->CCER &= ~TIM_CCER_CC1NP;	// clear cc1np bit for oc
+
+			TIM1->CCER &= ~TIM_CCER_CC2P; // set ch2 active high
+			TIM1->CCER &= ~TIM_CCER_CC2NP; // clear CC2NP for OC
+
+			TIM1->CCER |= TIM_CCER_CC1E;	// x enable output compare
+			TIM1->CCER |= TIM_CCER_CC2E; // enable output compare ch2
+
+            TIM1->BDTR |= TIM_BDTR_MOE; // set bit 15 (Main Output Enable)
+			TIM1->CR1 |= TIM_CR1_CEN;		// x enable counter for tim1
+}
+
+void setPWM1(int percent){
+	if (percent > 50){
+		TIM1->CCR1 = 47999;
+	}else if(percent > 20){
+		TIM1->CCR1 = 24000;
+	}
+	else{
+		TIM1->CCR1 = 0;
+	}
+
+	/*
+	uint16_t val = (TIM_ARR_VAL+1)*(percent/100);
+	//val = val/100;
+	TIM1->CCR1 = val;*/
+}
+
+void setPWM2(int percent){
+	if (percent > 50){
+			TIM1->CCR2 = 47999;
+	}else if(percent > 20){
+		TIM1->CCR2 = 24000;
+	}
+	else{
+		TIM1->CCR2 = 0;
+	}
+	/*
+	int val = (TIM_ARR_VAL+1)*(percent/100);
+	//val = val/100;
+	TIM1->CCR2 = (uint16_t)val;*/
+}
+
+void enableMotors(){
+	RCC->AHBENR |= RCC_AHBENR_GPIOAEN;
+	GPIOA->MODER |= (GPIO_MODER_MODER10_0);
+	GPIOA->ODR |= GPIO_ODR_10;
+}
+void disableMotors(){
+	GPIOA->ODR &= ~GPIO_ODR_10;
+}
+
+void enableGripper(){
+	RCC->AHBENR |= RCC_AHBENR_GPIOAEN;
+	GPIOA->MODER |= (GPIO_MODER_MODER11_0);
+	GPIOA->ODR |= GPIO_ODR_11;
+}
+void disableGripper(){
+	GPIOA->ODR &= ~GPIO_ODR_11;
+}
+
+void setDir(int dir){
+	RCC->AHBENR |= RCC_AHBENR_GPIOAEN;
+	GPIOA->MODER |= (GPIO_MODER_MODER12_0);
+	if (dir > 0){
+		GPIOA->ODR |= GPIO_ODR_12;
+	}
+	else{
+		GPIOA->ODR &= ~GPIO_ODR_12;
+	}
+
+}
+
 
 
