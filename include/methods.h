@@ -28,6 +28,13 @@
 //* PB0 		PROXIMITY SENSOR INPUT								 *
 //* PA1			PROXIMITY SENSOR POT CONTROLLER 					 *
 //* NEED TO INCLUDE MOTOR PINS AND PWM CONTORLLER PINS ETC..		 *
+//* need two PWM pins and 2 enable lines and 1 dir lines
+//* PA8 		PWM 1
+//* PA9			PWM 2
+//* PA10		enable motors (legs)
+//* PA11		enable motors (gripper)
+//* PA12		direction
+//* PA13
 //********************************************************************
 
 //====================================================================
@@ -70,7 +77,7 @@
 #define ADC_CHSELR_LINESENSOR3 		ADC_CHSELR_CHSEL7
 // testing (set input 1 and 2 to be pot0 and pot1), note that this is already the case
 
-
+//#define LEGS1_EN
 
 #define RESOLUTION	10
 
@@ -104,6 +111,16 @@ int calc_ProxPotIndex(int);
 
 void init_LineSensor(void);
 int read_LineSensor(int, int);
+
+void init_PWM(void);
+void setPWM1(int);
+void setPWM2(int);
+
+void enableMotors();
+void disableMotors();
+void enableGripper();
+void disableGripper();
+void setDir(int);
 
 // used to determine which of the line sensors is over the line
 typedef int lineFlags;
