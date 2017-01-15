@@ -76,12 +76,12 @@ int ADC_val = 0;
 // 					CALIBRATION VARIABLES
 // LIGHT SENSOR
 //int green_adc, red_adc, ambient_adc = 0;
-int green_adc = 800; int red_adc = 500; int ambient_adc = 200;
+int green_adc = 100; int red_adc = 50; int ambient_adc = 25;
 
 // LINE SENSOR
 //int line_adc = 0;
 //int noline_adc = 0;
-int line_adc = 800; int noline_adc = 200;
+int line_adc = 75; int noline_adc = 60;
 
 // PROXIMITY SENSOR
 int ADC_proxPot = 0;
@@ -183,35 +183,46 @@ void TIM6_DAC_IRQHandler(){
 
 		lineOutput = read_LineSensor(line_adc, noline_adc);
 
-		displayR(LCD_LINE_PROX);
-
 		if (lineOutput == 0b010){
 			// reset pwm speed
-			PWM_L_speed = PWM_BASE_SPEED;
-			PWM_R_speed = PWM_BASE_SPEED;
-			setPWM1(50);
-			setPWM2(50);
+			PWM_L_speed = 30;// PWM_BASE_SPEED;
+			PWM_R_speed = 30;//PWM_BASE_SPEED;
+			setPWM1(30);
+			setPWM2(30);
 			// reset timer
-			PWM_cnt = PWM_CHANGETIME;
+			//PWM_cnt = PWM_CHANGETIME;
 		}
 
+		/*
 		if (PWM_cnt < PWM_CHANGETIME){
 			PWM_cnt++;
 			break;
-		}
+		}*/
 
 		// otherwise PWM_cnt is == PWM_CHANGETIME
 
-		if (lineOutput == 0b100){ // right motor faster
-			PWM_R_speed = PWM_R_speed + 10; // TODO: Test and see if should change to const value
-			setPWM2(PWM_R_speed);
-			PWM_cnt = 0; // reset
+		if (lineOutput == 0b110 || lineOutput == 0b100){ // right motor faster /// or left motor slower
+			//PWM_R_speed = PWM_R_speed + 10; // TODO: Test and see if should change to const value
+			//setPWM2(PWM_R_speed);
+			PWM_L_speed = 10;
+			PWM_R_speed = 30;
+
+			setPWM1(10);
+			setPWM2(30);
+			//PWM_cnt = 0; // reset
 		}
-		else if (lineOutput == 0b001){ // left motor faster
-			PWM_L_speed = PWM_L_speed + 10;
-			setPWM1(PWM_L_speed);
-			PWM_cnt = 0; // reset
+		else if (lineOutput == 0b001 || lineOutput == 0b011){ // left motor faster
+			//PWM_L_speed = PWM_L_speed + 10;
+			//setPWM1(PWM_L_speed);
+			PWM_L_speed = 30;
+			PWM_R_speed = 10;
+
+			setPWM2(10);
+			setPWM1(30);
+			//PWM_cnt = 0; // reset
 		}
+
+		displayR(LCD_LINE_PROX);
 		break;
 
 	case SENSING_BATON_PROX:
@@ -244,7 +255,7 @@ void main (void)
 {
 
 	init_LCD();
-	lcd_putstring("EEE3061W v3");
+	lcd_putstring("EEE3061W v4.1");
 	lcd_command(LINE_TWO);
 	lcd_putstring("**FNLMAT001**");
 
@@ -292,19 +303,20 @@ void main (void)
 
 		if (returned == 1){
 			// reset values
+
 					dir = FORWARDS;
 					calibration_mode = -1;
 					race_mode = -1;
 					ADC_val = 0;
 					//green_adc = 800; red_adc = 500; ambient_adc = 200;
-					line_adc = 800; noline_adc = 200;
+					//line_adc = 800; noline_adc = 200;
 					ADC_proxPot = 0;
 
 					colour_detected = -1;
 					lineOutput = 0;
 					distance = 15;
-					PWM_L_speed = PWM_BASE_SPEED;
-					PWM_R_speed = PWM_BASE_SPEED;
+					PWM_L_speed = 30;
+					PWM_R_speed = 30;
 					//int PWM_cnt = PWM_CHANGETIME;
 					gripper_cnt = 0;
 					PWM_gripper = 0;
@@ -703,7 +715,12 @@ void displayC(int COMMAND){
 		char adc_y[4];
 		sprintf(adc_y, "%u", ADC_val); // UNLIKELY THAT ALL THIS WILL WORK
 		lcd_putstring1(adc_y,4);
-		lcd_putstring(" SW0|SW1");
+		lcd_putstring(" SW0|SW1 ");
+
+		char adc_b[4];
+		sprintf(adc_b, "%u", line_adc); // UNLIKELY THAT ALL THIS WILL WORK
+		lcd_putstring1(adc_b,4);
+
 		break;
 
 	case LCD_CALIBRATION_PROX:
@@ -744,7 +761,7 @@ void displayR(int COMMAND){
 
 		case GREEN: // green detected
 			lcd_putstring("GREEENNN!!");
-			tdelay();
+//			tdelay();
 			nextStage = true;
 			break;
 		case RED: // red detected
@@ -770,6 +787,29 @@ void displayR(int COMMAND){
 		char str[4];
 		sprintf(str, "%u", ADC_val);
 		lcd_putstring(str);
+
+		int ADC_val1 = read_ADC(ADC_CHSELR_LINESENSOR1);
+			int ADC_val2 = read_ADC(ADC_CHSELR_LINESENSOR2);
+			int ADC_val3 = read_ADC(ADC_CHSELR_LINESENSOR3);
+
+			lcd_command(CLEAR);
+			/*
+			 * debugging
+			 */
+			char a[2];
+			sprintf(a, "%u", ADC_val1);
+			lcd_putstring("1:");
+			lcd_putstring1(a, 3);
+
+			char b[2];
+			sprintf(b, "%u", ADC_val2);
+			lcd_putstring("2:");
+			lcd_putstring1(b, 3);
+
+			char c[2];
+			sprintf(c, "%u", ADC_val3);
+			lcd_putstring("3:");
+			lcd_putstring1(c, 3);
 
 		// nicely formatted output of linesensor output
 		lcd_command(LINE_TWO);

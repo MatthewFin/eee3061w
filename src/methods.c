@@ -18,10 +18,11 @@
 #include "lcd_stm32f0.h"
 #include "stm32f0xx.h"
 #include "methods.h"
+#include <stdio.h>
 //====================================================================
 // GLOBAL CONSTANTS
 //====================================================================
-uint16_t TIM_ARR_VAL = 47999;
+uint16_t TIM_ARR_VAL = 4799;
 
 //====================================================================
 // GLOBAL VARIABLES
@@ -175,7 +176,7 @@ int init_TIM6(int t) {
 
 	RCC->APB1ENR |= RCC_APB1ENR_TIM6EN; // enable clk
 	TIM6->PSC = (uint16_t) 5999;
-	TIM6->ARR = (uint16_t) (800*t-1);
+	TIM6->ARR = (uint16_t) (200*t-1);
 	TIM6->DIER |= TIM_DIER_UIE; // enable interrupts
 	TIM6->CR1 |= TIM_CR1_CEN; //start timer
 	return t; // returns time variable
@@ -319,7 +320,7 @@ int calc_ProxPotIndex(int x){
 int read_LineSensor(int line, int noline){
 
 	int output = 0;
-	int threshold = (line - noline)/2;
+	int threshold = (line + noline)/2;
 
 	int ADC_val1 = read_ADC(ADC_CHSELR_LINESENSOR1);
 	int ADC_val2 = read_ADC(ADC_CHSELR_LINESENSOR2);
@@ -372,9 +373,9 @@ void init_PWM(){
 			TIM1->CCMR1 |= (TIM_CCMR1_OC2M_1 | TIM_CCMR1_OC2M_2); // select PWM  mode for ch2
 			TIM1->CCMR1 &= ~TIM_CCMR1_OC2M_0;
 
-			TIM1->PSC |= 20;
+			TIM1->PSC |= 2;
 			TIM1->ARR = TIM_ARR_VAL;
-			TIM1->CCR1 = 24000;
+			setPWM1(50);
 			setPWM2(50);
 			//TIM1->CCR2 = 24000;
 
@@ -394,11 +395,21 @@ void init_PWM(){
 }
 
 void setPWM1(int percent){
-	if (percent > 50){
-		TIM1->CCR1 = 47999;
-	}else if(percent > 20){
-		TIM1->CCR1 = 24000;
+	if(percent == 100){
+		TIM1->CCR1 = (TIM_ARR_VAL);
 	}
+	else if (percent >= 50){
+		TIM1->CCR1 = (TIM_ARR_VAL/2);
+	}
+	else if (percent >= 30){
+		TIM1->CCR1 = (TIM_ARR_VAL/3);
+	}
+	else if(percent >= 20){
+		TIM1->CCR1 = (TIM_ARR_VAL/4);
+	}
+	else if(percent >=10){
+		TIM1->CCR1 = (TIM_ARR_VAL/6);
+		}
 	else{
 		TIM1->CCR1 = 0;
 	}
@@ -410,10 +421,20 @@ void setPWM1(int percent){
 }
 
 void setPWM2(int percent){
-	if (percent > 50){
-			TIM1->CCR2 = 47999;
-	}else if(percent > 20){
-		TIM1->CCR2 = 24000;
+	if(percent == 100){
+		TIM1->CCR2 = (TIM_ARR_VAL);
+	}
+	else if (percent >= 50){
+		TIM1->CCR2 = (TIM_ARR_VAL/2);
+	}
+	else if (percent >= 30){
+		TIM1->CCR2 = (TIM_ARR_VAL/3);
+	}
+	else if(percent >= 20){
+		TIM1->CCR2 = (TIM_ARR_VAL/4);
+	}
+	else if(percent >=10){
+		TIM1->CCR2 = (TIM_ARR_VAL/6);
 	}
 	else{
 		TIM1->CCR2 = 0;
