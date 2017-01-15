@@ -233,7 +233,7 @@ void TIM6_DAC_IRQHandler(){
 // CREATES A SET TIME DELAY BETWEEN NORMAL CPU INSTRUCTIONS
 void tdelay(){
 	for(int i =0; i<1000; i++){
-			for(int j=0; j<2000; j++){}
+			for(int j=0; j<1000; j++){}
 	}
 }
 
@@ -244,7 +244,7 @@ void main (void)
 {
 
 	init_LCD();
-	lcd_putstring("EEE3061W");
+	lcd_putstring("EEE3061W v3");
 	lcd_command(LINE_TWO);
 	lcd_putstring("**FNLMAT001**");
 
@@ -266,6 +266,8 @@ void main (void)
 		}
 	}
 
+	int returned = 0;
+
 	displayC(LCD_MAIN);
 
 	tdelay();
@@ -276,15 +278,41 @@ void main (void)
 			raceMode0();
 			displayC(LCD_MAIN);
 			// now finished with event
+			returned = 1;
 		}
 
 		if ((GPIOA->IDR & SW1) == 0){ // move on only after SW1 pressed
 			calibrationMode();
 			displayC(LCD_MAIN);
+			returned = 1;
 		}
-		if ((GPIOA->IDR & SW2) == 0){
-			// show calibration values
+		//if ((GPIOA->IDR & SW2) == 0){
+		//	// show calibration values
+		//}
+
+		if (returned == 1){
+			// reset values
+					dir = FORWARDS;
+					calibration_mode = -1;
+					race_mode = -1;
+					ADC_val = 0;
+					//green_adc = 800; red_adc = 500; ambient_adc = 200;
+					line_adc = 800; noline_adc = 200;
+					ADC_proxPot = 0;
+
+					colour_detected = -1;
+					lineOutput = 0;
+					distance = 15;
+					PWM_L_speed = PWM_BASE_SPEED;
+					PWM_R_speed = PWM_BASE_SPEED;
+					//int PWM_cnt = PWM_CHANGETIME;
+					gripper_cnt = 0;
+					PWM_gripper = 0;
+				returned = 0;
 		}
+
+
+
 	}
 
 }
@@ -329,7 +357,7 @@ void calibrateLightSensor(){
 	calibration_mode = CALIBRATE_LIGHT;
 	displayC(LCD_CALIBRATION_LIGHT);
 
-	init_TIM14(5);
+	init_TIM14(1);
 
 	tdelay();
 
@@ -381,7 +409,7 @@ void calibrateLineSensor(){
 	calibration_mode = CALIBRATE_LINE;
 	displayC(LCD_CALIBRATION_LINE);
 
-	init_TIM14(5);
+	init_TIM14(1);
 
 	tdelay();
 
@@ -428,7 +456,7 @@ void calibrateProxSensor(void){
 	lcd_command(LINE_TWO);
 	lcd_putstring("THE PARAM INDEX");
 
-	init_TIM14(5);
+	init_TIM14(1);
 	tdelay();
 
 	for(;;){
@@ -478,12 +506,13 @@ void raceMode0(void){
 
 	race_mode = SENSING_LIGHT;
 
-	displayR(LCD_LIGHT);
-	tdelay();
+	//displayR(LCD_LIGHT);
 
-	init_TIM6(5);
+
+	init_TIM6(1);
 	init_LightSensor();
 
+	tdelay();
 	for(;;){
 
 		if ((GPIOA->IDR & SW3) == 0){
@@ -512,10 +541,11 @@ void raceMode1(){
 
 	race_mode = SENSING_LINE_PROX;
 
-	displayR(LCD_LINE_PROX);
-	tdelay();
+	//displayR(LCD_LINE_PROX);
 
-	init_TIM6(5);
+	init_TIM6(1);
+
+	tdelay();
 
 	init_LineSensor();
 	init_ProxSensor();
@@ -566,9 +596,10 @@ void raceMode2(){
 	race_mode = SENSING_BATON_PROX;
 
 	displayR(LCD_BATON_PROX);
-	tdelay();
 
-	init_TIM6(5);
+	init_TIM6(1);
+
+	tdelay();
 	// TODO:gripper stage
 
 
@@ -749,14 +780,20 @@ void displayR(int COMMAND){
 		lcd_putchar('%');
 
 
-		lcd_putstring("   ");
+		lcd_putstring("  ");
 		if ((lineOutput & LEFT) == LEFT){ lcd_putstring("L");}
 		else {lcd_putchar('0');}
 		if ((lineOutput & MID) == MID){	lcd_putstring("M");}
 		else {lcd_putchar('0');}
 		if ((lineOutput & RIGHT) == RIGHT){	lcd_putstring("R");}
 		else {lcd_putchar('0');}
-		lcd_putstring("    ");
+		lcd_putstring(" ");
+
+		// read ADC line 1 and also output to screen
+		int adc_line = read_ADC(ADC_CHSELR_LINESENSOR1);
+				char adc_y[4];
+				sprintf(adc_y, "%u", adc_line);
+				lcd_putstring1(adc_y,4);
 
 		char str2[2];
 		sprintf(str2, "%u", PWM_R_speed);

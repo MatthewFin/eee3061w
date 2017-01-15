@@ -372,7 +372,7 @@ void init_PWM(){
 			TIM1->CCMR1 |= (TIM_CCMR1_OC2M_1 | TIM_CCMR1_OC2M_2); // select PWM  mode for ch2
 			TIM1->CCMR1 &= ~TIM_CCMR1_OC2M_0;
 
-			TIM1->PSC |= 200;
+			TIM1->PSC |= 20;
 			TIM1->ARR = TIM_ARR_VAL;
 			TIM1->CCR1 = 24000;
 			setPWM2(50);
@@ -453,6 +453,3 @@ void setDir(int dir){
 	}
 
 }
-
-
-
