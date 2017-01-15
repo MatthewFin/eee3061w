@@ -122,6 +122,7 @@ void enableGripper();
 void disableGripper();
 void setDir(int);
 
+void resetVars(void);
 // used to determine which of the line sensors is over the line
 typedef int lineFlags;
 enum{
