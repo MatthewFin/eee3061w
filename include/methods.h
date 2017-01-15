@@ -26,7 +26,7 @@
 //* PA6 		LINE SENSOR INPUT 2								 	 *
 //* PA7 		LINE SENSOR INPUT 3								 	 *
 //* PB0 		PROXIMITY SENSOR INPUT								 *
-//* PA1			PROXIMITY SENSOR POT CONTROLLER 					 *
+//* PB1			PROXIMITY SENSOR POT CONTROLLER 					 *
 //* NEED TO INCLUDE MOTOR PINS AND PWM CONTORLLER PINS ETC..		 *
 //* need two PWM pins and 2 enable lines and 1 dir lines
 //* PA8 		PWM 1
