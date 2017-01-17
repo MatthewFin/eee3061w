@@ -375,8 +375,8 @@ void init_PWM(){
 
 			TIM1->PSC |= 2;
 			TIM1->ARR = TIM_ARR_VAL;
-			setPWM1(50);
-			setPWM2(50);
+			//setPWM1(50);
+			//setPWM2(50);
 			//TIM1->CCR2 = 24000;
 
 			TIM1->CR1 &= ~TIM_CR1_CMS;		// set edge-alinged PWM
@@ -454,6 +454,7 @@ void disableMotors(){
 	GPIOA->ODR &= ~GPIO_ODR_10;
 }
 
+/*
 void enableGripper(){
 	RCC->AHBENR |= RCC_AHBENR_GPIOAEN;
 	GPIOA->MODER |= (GPIO_MODER_MODER11_0);
@@ -461,16 +462,16 @@ void enableGripper(){
 }
 void disableGripper(){
 	GPIOA->ODR &= ~GPIO_ODR_11;
-}
+}*/
 
 void setDir(int dir){
 	RCC->AHBENR |= RCC_AHBENR_GPIOAEN;
-	GPIOA->MODER |= (GPIO_MODER_MODER12_0);
-	if (dir > 0){
-		GPIOA->ODR |= GPIO_ODR_12;
+	GPIOA->MODER |= (GPIO_MODER_MODER11_0);
+	if (dir > 0){ // dir == 0 for forwards
+		GPIOA->ODR |= GPIO_ODR_11;
 	}
 	else{
-		GPIOA->ODR &= ~GPIO_ODR_12;
+		GPIOA->ODR &= ~GPIO_ODR_11;
 	}
 
 }

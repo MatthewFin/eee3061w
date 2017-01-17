@@ -50,10 +50,15 @@
 #define DELAY		5 // meaning 0.5s
 #define PWM_CHANGETIME				4 // 4x0.5s = 2s delays
 #define PWM_BASE_SPEED				50 //refers to duty cycle
-#define BATON_DISTANCE				5 // cm, distance needed to grip from
+#define BATON_DISTANCE				2 // cm, distance needed to grip from
 //====================================================================
 // GLOBAL VARIABLES
 //====================================================================
+int display_prox = 0;
+
+int PWM_go = 50;
+int PWM_nogo = 10;
+
 typedef int bool;
 enum{false, true};
 bool nextStage = false;
@@ -63,6 +68,7 @@ typedef enum Directions{
 	BACKWARDS
 } Direction;
 
+int num_ends = 0;
 
 Direction dir = FORWARDS;
 
@@ -81,7 +87,7 @@ int green_adc = 100; int red_adc = 50; int ambient_adc = 25;
 // LINE SENSOR
 //int line_adc = 0;
 //int noline_adc = 0;
-int line_adc = 75; int noline_adc = 60;
+int line_adc = 65; int noline_adc = 45;
 
 // PROXIMITY SENSOR
 int ADC_proxPot = 0;
@@ -185,10 +191,10 @@ void TIM6_DAC_IRQHandler(){
 
 		if (lineOutput == 0b010){
 			// reset pwm speed
-			PWM_L_speed = 30;// PWM_BASE_SPEED;
-			PWM_R_speed = 30;//PWM_BASE_SPEED;
-			setPWM1(30);
-			setPWM2(30);
+			PWM_L_speed = PWM_go;// PWM_BASE_SPEED;
+			PWM_R_speed = PWM_go;//PWM_BASE_SPEED;
+			setPWM1(PWM_go);
+			setPWM2(PWM_go);
 			// reset timer
 			//PWM_cnt = PWM_CHANGETIME;
 		}
@@ -204,21 +210,21 @@ void TIM6_DAC_IRQHandler(){
 		if (lineOutput == 0b110 || lineOutput == 0b100){ // right motor faster /// or left motor slower
 			//PWM_R_speed = PWM_R_speed + 10; // TODO: Test and see if should change to const value
 			//setPWM2(PWM_R_speed);
-			PWM_L_speed = 10;
-			PWM_R_speed = 30;
+			PWM_L_speed = PWM_nogo;
+			PWM_R_speed = PWM_go;
 
-			setPWM1(10);
-			setPWM2(30);
+			setPWM1(PWM_nogo);
+			setPWM2(PWM_go);
 			//PWM_cnt = 0; // reset
 		}
 		else if (lineOutput == 0b001 || lineOutput == 0b011){ // left motor faster
 			//PWM_L_speed = PWM_L_speed + 10;
 			//setPWM1(PWM_L_speed);
-			PWM_L_speed = 30;
-			PWM_R_speed = 10;
+			PWM_L_speed = PWM_go;
+			PWM_R_speed = PWM_nogo;
 
-			setPWM2(10);
-			setPWM1(30);
+			setPWM2(PWM_nogo);
+			setPWM1(PWM_go);
 			//PWM_cnt = 0; // reset
 		}
 
@@ -255,7 +261,7 @@ void main (void)
 {
 
 	init_LCD();
-	lcd_putstring("EEE3061W v4.1");
+	lcd_putstring("EEE3061W v9");
 	lcd_command(LINE_TWO);
 	lcd_putstring("**FNLMAT001**");
 
@@ -265,14 +271,17 @@ void main (void)
 	init_LightSensor();
 	init_ProxSensor();
 	init_LineSensor();
-	enableGripper();
+	init_PWM();
+	//enableGripper();
 	enableMotors();
-	disableGripper();
+	//disableGripper();
 	disableMotors();
-	setDir(0);
+	dir = FORWARDS;
+	setDir(1);
 
 	for(;;){ // press SW0 to move on
 		if ((GPIOA->IDR & SW0) == 0){
+			tdelay();
 			break;
 		}
 	}
@@ -322,8 +331,6 @@ void main (void)
 					PWM_gripper = 0;
 				returned = 0;
 		}
-
-
 
 	}
 
@@ -555,20 +562,26 @@ void raceMode1(){
 
 	//displayR(LCD_LINE_PROX);
 
-	init_TIM6(1);
 
-	tdelay();
 
 	init_LineSensor();
 	init_ProxSensor();
 	init_PWM();
 	enableMotors();
 
-	if (dir == BACKWARDS){
+
+	if (dir == FORWARDS){
 		setDir(1); // set direction of motors
 	}else{
 		setDir(0);
 	}
+
+	init_TIM6(1);
+
+	tdelay();
+
+	setPWM1(PWM_go);
+	setPWM2(PWM_go);
 
 	for(;;){
 
@@ -586,6 +599,12 @@ void raceMode1(){
 			unclk_TIM6();
 			tdelay();
 			return;
+		}
+		if ((GPIOA->IDR & SW1) == 0){
+			display_prox = 1;
+		}
+		if ((GPIOA->IDR & SW2) == 0){
+			display_prox = 0;
 		}
 
 		if (nextStage == true){
@@ -618,16 +637,16 @@ void raceMode2(){
 	// enable the gripper motors and turn them on
 	disableMotors();
 
-	enableGripper();
+	//enableGripper();
 	setPWM1(0);
 	setPWM2(0);
 	tdelay();	tdelay();	tdelay();
-	setPWM1(100);
+	//setPWM1(1000);
 	tdelay();	tdelay();	tdelay();	tdelay();	tdelay();
-	setPWM2(100);
-	tdelay();	tdelay();	tdelay();	tdelay();
+	//setPWM2(100);
+	//tdelay();	tdelay();	tdelay();	tdelay();
 
-	disableGripper(); /// TODO: possibly don't want to ude this
+	//disableGripper(); /// TODO: possibly don't want to ude this
 
 	for(;;){
 
@@ -671,7 +690,7 @@ void raceMode3(){
 	tdelay();
 
 	disableMotors();
-	disableGripper(); ///// TODO: check that gripper holds without there being power
+	//disableGripper(); ///// TODO: check that gripper holds without there being power
 
 }
 
@@ -788,6 +807,7 @@ void displayR(int COMMAND){
 		sprintf(str, "%u", ADC_val);
 		lcd_putstring(str);
 
+		if (display_prox == 1){
 		int ADC_val1 = read_ADC(ADC_CHSELR_LINESENSOR1);
 			int ADC_val2 = read_ADC(ADC_CHSELR_LINESENSOR2);
 			int ADC_val3 = read_ADC(ADC_CHSELR_LINESENSOR3);
@@ -810,7 +830,7 @@ void displayR(int COMMAND){
 			sprintf(c, "%u", ADC_val3);
 			lcd_putstring("3:");
 			lcd_putstring1(c, 3);
-
+		}
 		// nicely formatted output of linesensor output
 		lcd_command(LINE_TWO);
 
@@ -842,10 +862,15 @@ void displayR(int COMMAND){
 
 		if ((distance < BATON_DISTANCE) & (dir == FORWARDS)){///////
 			nextStage = true;
+			setPWM1(0);
+			setPWM2(0);
 		}
 		if ((lineOutput == 0b111) & (dir == BACKWARDS)){ /////////
 			// TODO: must add some number of times for this to occur
+			num_ends++;
+			if (num_ends == 3){
 			nextStage = true;
+			}
 		}
 		break;
 
