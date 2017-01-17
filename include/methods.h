@@ -32,8 +32,8 @@
 //* PA8 		PWM 1
 //* PA9			PWM 2
 //* PA10		enable motors (legs)
-//* PA11		enable motors (gripper)
-//* PA12		direction
+//* PA11		dir      						enable motors (gripper)
+//* 												PA12		directionx  x
 //* PA13
 //********************************************************************
 
